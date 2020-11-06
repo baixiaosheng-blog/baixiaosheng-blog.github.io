@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>android studio调试技巧 | 百xiao生</title>
-  <meta name="keywords" content=" Android studio ">
-  <meta name="description" content="android studio调试技巧 | 百xiao生">
+  <title>Java中基本类型默认值 | 百xiao生</title>
+  <meta name="keywords" content=" Java学习笔记 ">
+  <meta name="description" content="Java中基本类型默认值 | 百xiao生">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="Java中基本类型默认值如果类的成员变量是基本类型，那么在类初始化时，这些类型将会被赋予一个初始值。这些默认值仅在 Java 初始化类的时候才会被赋予。这种方式确保了基本类型的字段始终能被初始化（在 C++ 中不会），从而减少了 bug 的来源。但是，这些初始值对于程序来说并不一定是合法或者正确的。所以，为了安全，我们最好始终显式地初始化变量。      基本类型 初始值    boolean f">
 <meta property="og:type" content="article">
@@ -350,9 +350,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-Androidstudio调试技巧" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-Java中基本类型默认值" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">android studio调试技巧</h1>
+        <h1 class="article-title">Java中基本类型默认值</h1>
     
     <div class="article-meta">
         
@@ -362,19 +362,19 @@
         <span class="tag">
             <i class="iconfont icon-tag"></i>
             
-            <a class="color5">Android studio</a>
+            <a class="color4">Java学习笔记</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2020-09-25 17:54:19'>2020-05-11 16:57</time>
+            发布时间 : <time class="date" title='最后更新: 2020-11-06 19:20:02'>2020-11-06 18:32</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:81</span>
+        <span>字数:339</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -404,7 +404,7 @@
     
     <div class="toc-ref">
     
-        
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Java中基本类型默认值"><span class="toc-text">Java中基本类型默认值</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -420,13 +420,56 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <ul>
-<li>有时App闪退可能是用到了某些权限而又在程序中没有动态申请权限，也没有手动授权，这时要到设置里手动给App授权。</li>
-<li>run窗口要在工程界面点击▲，才会出现</li>
-<li>Logcat 日志工具 log 显示日志</li>
-<li>expro导入导出数据</li>
-</ul>
+        <h1 id="Java中基本类型默认值"><a href="#Java中基本类型默认值" class="headerlink" title="Java中基本类型默认值"></a>Java中基本类型默认值</h1><p>如果类的成员变量是基本类型，那么在类初始化时，这些类型将会被赋予一个初始值。<br>这些默认值仅在 Java 初始化类的时候才会被赋予。这种方式确保了基本类型的字段始终能被初始化（在 C++ 中不会），<br>从而减少了 bug 的来源。<strong>但是</strong>，<u>这些初始值对于程序来说并不一定是合法或者正确的</u>。<br><strong>所以</strong>，为了安全，<u>我们最好始终显式地初始化变量</u>。  </p>
+<table>
+<thead>
+<tr>
+<th align="center">基本类型</th>
+<th align="center">初始值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">boolean</td>
+<td align="center">false</td>
+</tr>
+<tr>
+<td align="center">char</td>
+<td align="center">\u0000 (null)</td>
+</tr>
+<tr>
+<td align="center">byte</td>
+<td align="center">(byte) 0</td>
+</tr>
+<tr>
+<td align="center">short</td>
+<td align="center">(short) 0</td>
+</tr>
+<tr>
+<td align="center">int</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">long</td>
+<td align="center">0L</td>
+</tr>
+<tr>
+<td align="center">float</td>
+<td align="center">0.0f</td>
+</tr>
+<tr>
+<td align="center">double</td>
+<td align="center">0.0d</td>
+</tr>
+</tbody></table>
+<p>这种默认值的赋予并不适用于局部变量 —— 那些不属于类的字段的变量(即非成员变量)。<br>因此，若在方法中定义的基本类型数据，这里的变量 b 不会自动初始化为0，因而在使用变量 b 之前，程序员有责任主动地为其赋值（和 C 、C++ 一致）。如果我们忘记了这一步， Java 将会提示我们“编译时错误，该变量可能尚未被初始化”。这一点做的比 C++ 更好，在后者中，编译器只是提示警告，而在 Java 中则直接报错。</p>
+<pre><code>class demo{
+    int a；
 
+    public void show（）{
+        int b；
+        ……
+    }
+}</code></pre>
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 1401362462@qq.com </span>
     </div>
@@ -435,12 +478,12 @@
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>android studio调试技巧</p>
-    <p><span class="copy-title">字数:</span><span class="post-count">81</span></p>
+    <p><span class="copy-title">文章标题:</span>Java中基本类型默认值</p>
+    <p><span class="copy-title">字数:</span><span class="post-count">339</span></p>
     <p><span class="copy-title">本文作者:</span><a  title="百xiao生">百xiao生</a></p>
-    <p><span class="copy-title">发布时间:</span>2020-05-11, 16:57:22</p>
-    <p><span class="copy-title">最后更新:</span>2020-09-25, 17:54:19</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2020/05/11/Androidstudio%E8%B0%83%E8%AF%95%E6%8A%80%E5%B7%A7/" title="android studio调试技巧">https://baixiaoshengzjj.top/2020/05/11/Androidstudio%E8%B0%83%E8%AF%95%E6%8A%80%E5%B7%A7/</a>
+    <p><span class="copy-title">发布时间:</span>2020-11-06, 18:32:05</p>
+    <p><span class="copy-title">最后更新:</span>2020-11-06, 19:20:02</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2020/11/06/Java%E4%B8%AD%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B%E9%BB%98%E8%AE%A4%E5%80%BC/" title="Java中基本类型默认值">https://baixiaoshengzjj.top/2020/11/06/Java%E4%B8%AD%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B%E9%BB%98%E8%AE%A4%E5%80%BC/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">&#34;署名-非商用-相同方式共享 4.0&#34;</a> 转载请保留原文链接及作者。
     </p>
