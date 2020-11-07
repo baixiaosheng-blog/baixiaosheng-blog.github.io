@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>我的第一篇博客文章 | 百xiao生</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="我的第一篇博客文章 | 百xiao生">
+  <title>Java中的static关键字 | 百xiao生</title>
+  <meta name="keywords" content=" Java学习笔记 ">
+  <meta name="description" content="Java中的static关键字 | 百xiao生">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="Java中的static关键字类是对象的外观及行为方式的描述。通常只有在使用 new 创建那个类的对象后，数据存储空间才被分配，对象的方法才能供外界调用。这种方式在两种情况下是不足的：  有时你只想为特定字段（注：也称为属性、域）分配一个共享存储空间，而不去考虑究竟要创建多少对象，甚至根本就不创建对象。  创建一个与此类的任何对象无关的方法。也就是说，即使没有创建对象，也能调用该方法。   sta">
 <meta property="og:type" content="article">
@@ -358,24 +358,31 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-我的第一篇博客文章" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-Java中的static关键字" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">我的第一篇博客文章</h1>
+        <h1 class="article-title">Java中的static关键字</h1>
     
     <div class="article-meta">
         
         
         
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color4">Java学习笔记</a>
+            
+        </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2020-03-29 22:58:52'>2020-03-28 00:20</time>
+            发布时间 : <time class="date" title='最后更新: 2020-11-08 00:08:33'>2020-11-07 22:53</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:32</span>
+        <span>字数:384</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -405,7 +412,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#第一章"><span class="toc-text">第一章</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Java中的static关键字"><span class="toc-text">Java中的static关键字</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -421,7 +428,15 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><p>几经周折（大半天了，中间还转去hugo了），我终于装好了hexo，搞出了这篇文章。</p>
+        <h1 id="Java中的static关键字"><a href="#Java中的static关键字" class="headerlink" title="Java中的static关键字"></a>Java中的static关键字</h1><p>类是对象的外观及行为方式的描述。通常只有在使用 new 创建那个类的对象后，数据存储空间才被分配，对象的方法才能供外界调用。这种方式在两种情况下是不足的：</p>
+<ol>
+<li><p>有时你只想为特定字段（注：也称为属性、域）分配一个共享存储空间，而不去考虑究竟要创建多少对象，甚至根本就不创建对象。</p>
+</li>
+<li><p>创建一个与此类的任何对象无关的方法。也就是说，即使没有创建对象，也能调用该方法。</p>
+</li>
+</ol>
+<p>static 关键字就符合上述两点要求。当我们说某个事物是静态时，就意味着该字段或方法不依赖于任何特定的对象实例 。 即使我们从未创建过该类的对象，也可以调用其静态方法或访问其静态字段。<br>相反，对于普通的非静态字段和方法，我们必须要先创建一个对象并使用该对象来访问字段或方法，因为非静态字段和方法必须与特定对象关联</p>
+<p><em>引用静态变量有两种方法</em>。  我们通过一个对象来定位它，我们也可以通过类名直接引用它，但这种方式对于非静态成员则不可行，<strong>使用类名直接引用静态变量是首选方法，因为它强调了变量的静态属性</strong>。</p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 1401362462@qq.com </span>
@@ -431,12 +446,12 @@
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>我的第一篇博客文章</p>
-    <p><span class="copy-title">字数:</span><span class="post-count">32</span></p>
+    <p><span class="copy-title">文章标题:</span>Java中的static关键字</p>
+    <p><span class="copy-title">字数:</span><span class="post-count">384</span></p>
     <p><span class="copy-title">本文作者:</span><a  title="百xiao生">百xiao生</a></p>
-    <p><span class="copy-title">发布时间:</span>2020-03-28, 00:20:31</p>
-    <p><span class="copy-title">最后更新:</span>2020-03-29, 22:58:52</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2020/03/28/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" title="我的第一篇博客文章">https://baixiaoshengzjj.top/2020/03/28/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/</a>
+    <p><span class="copy-title">发布时间:</span>2020-11-07, 22:53:41</p>
+    <p><span class="copy-title">最后更新:</span>2020-11-08, 00:08:33</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2020/11/07/Java%E4%B8%AD%E7%9A%84static%E5%85%B3%E9%94%AE%E5%AD%97/" title="Java中的static关键字">https://baixiaoshengzjj.top/2020/11/07/Java%E4%B8%AD%E7%9A%84static%E5%85%B3%E9%94%AE%E5%AD%97/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">&#34;署名-非商用-相同方式共享 4.0&#34;</a> 转载请保留原文链接及作者。
     </p>
