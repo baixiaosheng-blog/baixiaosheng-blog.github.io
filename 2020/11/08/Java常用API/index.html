@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>hexo之3-hexo主题之页脚添加ICP备案 | 百xiao生</title>
-  <meta name="keywords" content=" hexo , ICP备案 ">
-  <meta name="description" content="hexo之3-hexo主题之页脚添加ICP备案 | 百xiao生">
+  <title>Java常用API | 百xiao生</title>
+  <meta name="keywords" content=" Java学习笔记 ">
+  <meta name="description" content="Java常用API | 百xiao生">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="一、Object类 java.lang.Object是Java语言中的根类，即所有类的父类。如果一个类没有特别指定父类，那么默认则继承自Object类。  Object类主要方法：    public String toString() ：返回该对象的字符串表示。 public boolean equals(Object obj) ：指示其他某个对象是否与此对象“相等”。  toString方法：">
 <meta property="og:type" content="article">
@@ -366,9 +366,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-hexo之3-hexo主题之页脚添加ICP备案" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-Java常用API" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">hexo之3-hexo主题之页脚添加ICP备案</h1>
+        <h1 class="article-title">Java常用API</h1>
     
     <div class="article-meta">
         
@@ -378,21 +378,19 @@
         <span class="tag">
             <i class="iconfont icon-tag"></i>
             
-            <a class="color5">hexo</a>
-            
-            <a class="color1">ICP备案</a>
+            <a class="color4">Java学习笔记</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2020-11-03 23:55:32'>2020-06-30 21:05</time>
+            发布时间 : <time class="date" title='最后更新: 2020-11-09 00:10:19'>2020-11-08 13:12</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:274</span>
+        <span>字数:381</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -422,7 +420,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#hexo之3-hexo主题之页脚添加ICP备案"><span class="toc-text">hexo之3-hexo主题之页脚添加ICP备案</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#备案信息有变动，更改之后审核驳回，然而原因并不是信息有误。。。（会想起当初被驳回三次的经历-狗头-jpg）"><span class="toc-text">备案信息有变动，更改之后审核驳回，然而原因并不是信息有误。。。（会想起当初被驳回三次的经历 狗头.jpg）</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#"><span class="toc-text"></span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#作为守法公民，改！必须改！"><span class="toc-text">作为守法公民，改！必须改！</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#新版3-hexo主题在-“-config-yml”-文件中添加了底部备案号设置项，设置备案号更便捷"><span class="toc-text">新版3-hexo主题在 “_config.yml” 文件中添加了底部备案号设置项，设置备案号更便捷</span></a></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#一、Object类"><span class="toc-text">一、Object类</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#toString方法："><span class="toc-text">toString方法：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#equals方法："><span class="toc-text">equals方法：</span></a></li></ol></li></ol></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -438,20 +436,28 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="hexo之3-hexo主题之页脚添加ICP备案"><a href="#hexo之3-hexo主题之页脚添加ICP备案" class="headerlink" title="hexo之3-hexo主题之页脚添加ICP备案"></a>hexo之3-hexo主题之页脚添加ICP备案</h1><h6 id="备案信息有变动，更改之后审核驳回，然而原因并不是信息有误。。。（会想起当初被驳回三次的经历-狗头-jpg）"><a href="#备案信息有变动，更改之后审核驳回，然而原因并不是信息有误。。。（会想起当初被驳回三次的经历-狗头-jpg）" class="headerlink" title="备案信息有变动，更改之后审核驳回，然而原因并不是信息有误。。。（会想起当初被驳回三次的经历 狗头.jpg）"></a>备案信息有变动，更改之后审核驳回，然而原因并不是信息有误。。。（会想起当初被驳回三次的经历 狗头.jpg）</h6><hr>
-<h2 id><a href="#" class="headerlink" title></a><img src="/2020/06/30/hexo%E4%B9%8B3-hexo%E4%B8%BB%E9%A2%98%E4%B9%8B%E9%A1%B5%E8%84%9A%E6%B7%BB%E5%8A%A0ICP%E5%A4%87%E6%A1%88/1.jpg" alt></h2><h2 id="作为守法公民，改！必须改！"><a href="#作为守法公民，改！必须改！" class="headerlink" title="作为守法公民，改！必须改！"></a><strong>作为守法公民，改！必须改！</strong></h2><p>打开“copyright.ejs”文件 （记事本之类的文本编辑工具）</p>
-<pre><code>文件路径：博客文件夹所在目录\themes\hexo-theme-3-hexo\layout\_partial    </code></pre><hr>
-<p><img src="/2020/06/30/hexo%E4%B9%8B3-hexo%E4%B8%BB%E9%A2%98%E4%B9%8B%E9%A1%B5%E8%84%9A%E6%B7%BB%E5%8A%A0ICP%E5%A4%87%E6%A1%88/2.jpg" alt></p>
-<hr>
-<p>在中间加入代码（<strong>记得修改代码末端的“你的备案号”喔！</strong>）</p>
-<p><img src="/2020/06/30/hexo%E4%B9%8B3-hexo%E4%B8%BB%E9%A2%98%E4%B9%8B%E9%A1%B5%E8%84%9A%E6%B7%BB%E5%8A%A0ICP%E5%A4%87%E6%A1%88/3.jpg" alt> </p>
-<pre><code>&lt;p class=&quot;footer-entry&quot;&gt; &lt;img src=&quot;http://gdga.gd.gov.cn/images/lgh.png&quot;&gt; &lt;a href=&quot;http://www.beian.miit.gov.cn/&quot; target=&quot;_blank&quot;&gt;你的备案号&lt;/a&gt; &lt;/p&gt;</code></pre><hr>
-<p>效果如下</p>
-<p><img src="/2020/06/30/hexo%E4%B9%8B3-hexo%E4%B8%BB%E9%A2%98%E4%B9%8B%E9%A1%B5%E8%84%9A%E6%B7%BB%E5%8A%A0ICP%E5%A4%87%E6%A1%88/4.jpg" alt></p>
-<p>备案号位置随代码插入位置改变，备案号前面的图标<img src="http://gdga.gd.gov.cn/images/lgh.png">可去除，删除前部分代码即可。</p>
-<pre><code>&lt;img src=&quot;http://gdga.gd.gov.cn/images/lgh.png&quot;&gt; </code></pre><hr>
-<h3 id="新版3-hexo主题在-“-config-yml”-文件中添加了底部备案号设置项，设置备案号更便捷"><a href="#新版3-hexo主题在-“-config-yml”-文件中添加了底部备案号设置项，设置备案号更便捷" class="headerlink" title="新版3-hexo主题在 “_config.yml” 文件中添加了底部备案号设置项，设置备案号更便捷"></a>新版3-hexo主题在 <em>“_config.yml”</em> 文件中添加了底部备案号设置项，设置备案号更便捷</h3><p><img src="/2020/06/30/hexo%E4%B9%8B3-hexo%E4%B8%BB%E9%A2%98%E4%B9%8B%E9%A1%B5%E8%84%9A%E6%B7%BB%E5%8A%A0ICP%E5%A4%87%E6%A1%88/5.jpg" alt></p>
-<pre><code>“_config.yml”文件路径：博客文件夹所在目录\themes\3-hexo</code></pre>
+        <h1 id="一、Object类"><a href="#一、Object类" class="headerlink" title="一、Object类"></a>一、Object类</h1><ul>
+<li><p><code>java.lang.Object</code>是Java语言中的根类，即所有类的父类。如果一个类没有特别指定父类，那么默认则继承自Object类。</p>
+</li>
+<li><p>Object类主要方法：</p>
+</li>
+</ul>
+<ol>
+<li>public String toString() ：返回该对象的字符串表示。</li>
+<li>public boolean equals(Object obj) ：指示其他某个对象是否与此对象“相等”。</li>
+</ol>
+<h4 id="toString方法："><a href="#toString方法：" class="headerlink" title="toString方法："></a>toString方法：</h4><p>toString方法返回该对象的字符串表示，其实该字符串内容就是对象的类型+@+内存地址值。</p>
+<p>由于toString方法返回的结果是内存地址，而在开发中，经常需要按照对象的属性得到相应的字符串表现形式，因此也需要重写它。</p>
+<p>在IntelliJ IDEA中，可以使用快捷键<code>alt+insert</code>，点击<code>toString()</code>选项，选择需要包含的成员变量，快速生成重写toString方法。</p>
+<p><strong><em>直接使用输出语句输出对象名的时候,其实通过该对象调用了其toString()方法。</em></strong></p>
+<h4 id="equals方法："><a href="#equals方法：" class="headerlink" title="equals方法："></a>equals方法：</h4><p>调用成员方法equals并指定参数为另一个对象，则可以判断这两个对象是否是相同的。</p>
+<ul>
+<li><p>默认的equals方法进行<code>“==”</code>运算符的对象地址比较，只要不是同一个对象，结果为false。</p>
+</li>
+<li><p>如果希望进行对象的内容比较，即以所有或指定的部分成员变量来判定两个对象是否相同，则需要重写equals方法。<br>在IntelliJ IDEA中，可以使用快捷键<code>alt+insert</code>，并选择<code>equals() and hashCode()</code>进行自动代码生成。</p>
+</li>
+</ul>
+
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 1401362462@qq.com </span>
     </div>
@@ -460,12 +466,12 @@
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>hexo之3-hexo主题之页脚添加ICP备案</p>
-    <p><span class="copy-title">字数:</span><span class="post-count">274</span></p>
+    <p><span class="copy-title">文章标题:</span>Java常用API</p>
+    <p><span class="copy-title">字数:</span><span class="post-count">381</span></p>
     <p><span class="copy-title">本文作者:</span><a  title="百xiao生">百xiao生</a></p>
-    <p><span class="copy-title">发布时间:</span>2020-06-30, 21:05:23</p>
-    <p><span class="copy-title">最后更新:</span>2020-11-03, 23:55:32</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2020/06/30/hexo%E4%B9%8B3-hexo%E4%B8%BB%E9%A2%98%E4%B9%8B%E9%A1%B5%E8%84%9A%E6%B7%BB%E5%8A%A0ICP%E5%A4%87%E6%A1%88/" title="hexo之3-hexo主题之页脚添加ICP备案">https://baixiaoshengzjj.top/2020/06/30/hexo%E4%B9%8B3-hexo%E4%B8%BB%E9%A2%98%E4%B9%8B%E9%A1%B5%E8%84%9A%E6%B7%BB%E5%8A%A0ICP%E5%A4%87%E6%A1%88/</a>
+    <p><span class="copy-title">发布时间:</span>2020-11-08, 13:12:41</p>
+    <p><span class="copy-title">最后更新:</span>2020-11-09, 00:10:19</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2020/11/08/Java%E5%B8%B8%E7%94%A8API/" title="Java常用API">https://baixiaoshengzjj.top/2020/11/08/Java%E5%B8%B8%E7%94%A8API/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">&#34;署名-非商用-相同方式共享 4.0&#34;</a> 转载请保留原文链接及作者。
     </p>
