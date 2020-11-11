@@ -188,7 +188,7 @@
     <div></div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="13">
-<input type="hidden" id="yelog_site_word_count" value="3.8k">
+<input type="hidden" id="yelog_site_word_count" value="4.2k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -396,12 +396,12 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2020-11-11 00:50:27'>2020-11-10 22:01</time>
+            发布时间 : <time class="date" title='最后更新: 2020-11-11 16:03:50'>2020-11-10 22:01</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:769</span>
+        <span>字数:1.1k</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -490,29 +490,72 @@ String str2 = new String(chars);
 // 通过字节数组构造
 byte bytes[] = { 97, 98, 99 };
 String str3 = new String(bytes);</code></pre><h3 id="3、-String类的常用方法"><a href="#3、-String类的常用方法" class="headerlink" title="3、 String类的常用方法"></a>3、 String类的常用方法</h3><ol>
-<li><p>判断类方法：<br> a. <code>public boolean equals (Object anObject)</code> ：将此字符串与指定对象进行比较。</p>
-<p> b. <code>public boolean equalsIgnoreCase (String anotherString)</code> ：将此字符串与指定对象进行比较，忽略大小</p>
-<pre><code>写。</code></pre><p> 方法使用举例：</p>
-<pre><code>String s1 = &quot;qaq&quot;;
-String s2 = &quot;qaq&quot;;
-String s3 = &quot;QAQ&quot;;
-
-// boolean equals(Object obj):比较字符串的内容是否相同
-System.out.println(s1.equals(s2)); // true
-System.out.println(s1.equals(s3)); // false
-System.out.println(&quot;‐‐‐‐‐‐‐‐‐‐‐&quot;);
-
-//boolean equalsIgnoreCase(String str):比较字符串的内容是否相同，[忽略大小写]
-System.out.println(s1.equalsIgnoreCase(s2)); // true
-System.out.println(s1.equalsIgnoreCase(s3)); // true</code></pre></li>
+<li><p>判断类方法：  </p>
+<ul>
+<li><p><code>public boolean equals (Object anObject)</code> ：将此字符串与指定对象进行比较。</p>
+</li>
+<li><p><code>public boolean equalsIgnoreCase (String anotherString)</code> ：将此字符串与指定对象进行比较，忽略大小<br>  写。</p>
+<p>方法使用举例：</p>
+<p>  String s1 = “qaq”;<br>  String s2 = “qaq”;<br>  String s3 = “QAQ”;</p>
+<p>  // boolean equals(Object obj):比较字符串的内容是否相同<br>  System.out.println(s1.equals(s2)); // true<br>  System.out.println(s1.equals(s3)); // false<br>  System.out.println(“‐‐‐‐‐‐‐‐‐‐‐”);</p>
+<p>  //boolean equalsIgnoreCase(String str):比较字符串的内容是否相同，[忽略大小写]<br>  System.out.println(s1.equalsIgnoreCase(s2)); // true<br>  System.out.println(s1.equalsIgnoreCase(s3)); // true</p>
+</li>
+</ul>
+</li>
 <li><p>字符串操作方法：</p>
-<p> a. <code>public int length ()</code> ：返回此字符串的长度。</p>
-<p> b. <code>public String concat (String str)</code> ：将指定的字符串连接到该字符串的末尾。</p>
-<p> c. <code>public char charAt (int index)</code> ：返回指定索引处的 char值。</p>
-<p> d. <code>public int indexOf (String str)</code> ：返回指定子字符串第一次出现在该字符串内的索引。</p>
-<p> e. <code>public String substring (int beginIndex)</code> ：返回一个子字符串，从beginIndex开始截取字符串到字符串结尾。</p>
-<p> f. <code>public String substring (int beginIndex, int endIndex)</code> ：返回一个子字符串，从beginIndex到endIndex截取字符串。含beginIndex，不含endIndex。</p>
-<p> g. <code>public String[] split(String regex)</code> ：将此字符串按照给定的regex（规则）拆分为字符串数组</p>
+<ul>
+<li><p><code>public int length ()</code> ：返回此字符串的长度。</p>
+</li>
+<li><p><code>public String concat (String str)</code> ：将指定的字符串连接到该字符串的末尾。</p>
+</li>
+<li><p><code>public char charAt (int index)</code> ：返回指定索引处的 char值。</p>
+</li>
+<li><p><code>public int indexOf (String str)</code> ：返回指定子字符串第一次出现在该字符串内的索引。</p>
+</li>
+<li><p><code>public String substring (int beginIndex)</code> ：返回一个子字符串，从beginIndex开始截取字符串到字符串结尾。</p>
+</li>
+<li><p><code>public String substring (int beginIndex, int endIndex)</code> ：返回一个子字符串，从beginIndex到endIndex截取字符串。含beginIndex，不含endIndex。</p>
+</li>
+<li><p><code>public String[] split(String regex)</code> ：将此字符串按照给定的regex（规则）拆分为字符串数组</p>
+<p>方法使用举例：</p>
+<pre><code>String s = &quot;wu wu wu&quot;;
+// int length():获取字符串的长度，其实也就是字符个数
+System.out.println(s.length());//8
+System.out.println(&quot;‐‐‐‐‐‐‐‐&quot;);
+
+// String concat (String str):将将指定的字符串连接到该字符串的末尾.
+String s1 = &quot;QWQ&quot;;
+String s2 = s1.concat(&quot;-QAQ&quot;);
+System.out.println(s2);// QWQ-QAQ
+
+// char charAt(int index):获取指定索引处的字符
+System.out.println(s2.charAt(0));//Q
+System.out.println(s2.charAt(1));//W
+System.out.println(&quot;‐‐‐‐‐‐‐‐&quot;);
+
+// int indexOf(String str):获取str在字符串对象中第一次出现的索引,没有返回‐1
+System.out.println(s2.indexOf(&quot;q&quot;));    //-1
+System.out.println(s2.indexOf(&quot;QWQ&quot;));   //0
+System.out.println(s2.indexOf(&quot;-&quot;));     //3
+System.out.println(&quot;‐‐‐‐‐‐‐‐&quot;);
+
+// String substring(int start):从start开始截取字符串到字符串结尾
+System.out.println(s2.substring(0));    //QWQ-QAQ
+System.out.println(s2.substring(4));    //QAQ
+System.out.println(&quot;‐‐‐‐‐‐‐‐&quot;);
+
+// String substring(int start,int end):从start到end截取字符串。含start，不含end。(end不能大于数组长度，否则运行报错)
+System.out.println(s2.substring(4,6));  //QA
+System.out.println(s2.substring(0, s.length()));//QWQ-QAQ
+System.out.println(s2.substring(4,8));  //报错StringIndexOutOfBoundsException begin 4, end 8, length 7</code></pre></li>
+</ul>
+</li>
+<li><p>转换功能的方法</p>
+<ul>
+<li><code>public char[] toCharArray ()</code> ：将此字符串转换为新的字符数组。</li>
+<li><code>public byte[] getBytes ()</code> ：使用平台的默认字符集将该 String编码转换为新的字节数组。</li>
+<li><code>public String replace (CharSequence target, CharSequence replacement)</code> ：将与target匹配的字符串使用replacement字符串替换。</li>
+</ul>
 </li>
 </ol>
 
@@ -525,10 +568,10 @@ System.out.println(s1.equalsIgnoreCase(s3)); // true</code></pre></li>
 
 <div class="article_copyright">
     <p><span class="copy-title">文章标题:</span>Java中的String类</p>
-    <p><span class="copy-title">字数:</span><span class="post-count">769</span></p>
+    <p><span class="copy-title">字数:</span><span class="post-count">1.1k</span></p>
     <p><span class="copy-title">本文作者:</span><a  title="百xiao生">百xiao生</a></p>
     <p><span class="copy-title">发布时间:</span>2020-11-10, 22:01:34</p>
-    <p><span class="copy-title">最后更新:</span>2020-11-11, 00:50:27</p>
+    <p><span class="copy-title">最后更新:</span>2020-11-11, 16:03:50</p>
     <span class="copy-title">原始链接:</span><a class="post-url" href="/2020/11/10/Java%E4%B8%AD%E7%9A%84String%E7%B1%BB/" title="Java中的String类">https://baixiaoshengzjj.top/2020/11/10/Java%E4%B8%AD%E7%9A%84String%E7%B1%BB/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">&#34;署名-非商用-相同方式共享 4.0&#34;</a> 转载请保留原文链接及作者。
