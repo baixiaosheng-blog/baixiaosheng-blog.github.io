@@ -3,18 +3,23 @@
 <head>
   <meta charset="utf-8">
   <title>Java中的StringBuilder类 | 百xiao生</title>
-  <meta name="keywords" content="">
+  <meta name="keywords" content=" Java学习笔记 ">
   <meta name="description" content="Java中的StringBuilder类 | 百xiao生">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="switchswitch 语句是一种实现多路选择的干净利落的一种方式，但它要求使用一个选择因子，并且必须是 int 或 char 那样的整数值。例如，假若将一个浮点数作为选择因子使用，那么它们在 switch 语句里是不会工作的。 switch的格式如下： switch(integral-selector) {     case integral-value1 : statement;    br">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java中的StringBuilder类">
-<meta property="og:url" content="https://baixiaoshengzjj.top/2020/11/13/Java%E4%B8%AD%E7%9A%84StringBuilder%E7%B1%BB/index.html">
+<meta property="og:title" content="Java中的switch语句">
+<meta property="og:url" content="https://baixiaoshengzjj.top/2020/11/13/Java%E4%B8%AD%E7%9A%84switch%E8%AF%AD%E5%8F%A5/index.html">
 <meta property="og:site_name" content="百xiao生">
+<meta property="og:description" content="switchswitch 语句是一种实现多路选择的干净利落的一种方式，但它要求使用一个选择因子，并且必须是 int 或 char 那样的整数值。例如，假若将一个浮点数作为选择因子使用，那么它们在 switch 语句里是不会工作的。 switch的格式如下： switch(integral-selector) {     case integral-value1 : statement;    br">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-11-13T09:01:30.000Z">
-<meta property="article:modified_time" content="2020-11-13T09:01:30.863Z">
+<meta property="og:image" content="https://baixiaoshengzjj.top/2020/11/13/Java%E4%B8%AD%E7%9A%84switch%E8%AF%AD%E5%8F%A5/1.jpg">
+<meta property="article:published_time" content="2020-11-13T08:59:17.000Z">
+<meta property="article:modified_time" content="2020-11-14T04:07:07.548Z">
 <meta property="article:author" content="百xiao生">
+<meta property="article:tag" content="Java学习笔记">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://baixiaoshengzjj.top/2020/11/13/Java%E4%B8%AD%E7%9A%84switch%E8%AF%AD%E5%8F%A5/1.jpg">
 
 
 <link rel="icon" href="/img/blogimage.jpg">
@@ -182,7 +187,7 @@
     <div></div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="16">
-<input type="hidden" id="yelog_site_word_count" value="5.3k">
+<input type="hidden" id="yelog_site_word_count" value="5.8k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -260,7 +265,7 @@
         
         <a  class="全部文章 "
            href="/2020/11/13/Java%E4%B8%AD%E7%9A%84StringBuilder%E7%B1%BB/"
-           data-tag=""
+           data-tag="Java学习笔记"
            data-author="" >
             <span class="post-title" title="Java中的StringBuilder类">Java中的StringBuilder类</span>
             <span class="post-date" title="2020-11-13 17:01:30">2020/11/13</span>
@@ -404,15 +409,22 @@
         
         
         
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color4">Java学习笔记</a>
+            
+        </span>
+        
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2020-11-13 17:01:30'>2020-11-13 17:01</time>
+            发布时间 : <time class="date" title='最后更新: 2020-11-15 23:47:44'>2020-11-13 17:01</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:0</span>
+        <span>字数:550</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -442,7 +454,7 @@
     
     <div class="toc-ref">
     
-        
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#概述"><span class="toc-text">概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#构造方法"><span class="toc-text">构造方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常用方法"><span class="toc-text">常用方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#append方法"><span class="toc-text">append方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#toString方法"><span class="toc-text">toString方法</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -458,7 +470,52 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p><code>API描述</code>：一个可变的字符序列。此类提供一个与 StringBuffer 兼容的 API，但不保证同步。该类被设计用作 StringBuffer 的一个简易替换，用在字符串缓冲区被单个线程使用的时候（这种情况很普遍）。如果可能，建议优先采用该类，因为在大多数实现中，它比 StringBuffer 要快。</p>
+<ul>
+<li><u>将 StringBuilder 的实例用于多个线程是不安全的。如果需要这样的同步，则建议使用 StringBuffer</u>。</li>
+</ul>
+<p>如果用String类对字符串进行拼接操作，接每次拼接，都会构建一个新的，未必用得上的String对象，既耗时，又浪费空间。为了解决这一问题，可以使用<code>java.lang.StringBuilder</code>类。</p>
+<hr>
+<h2 id="构造方法"><a href="#构造方法" class="headerlink" title="构造方法"></a>构造方法</h2><ul>
+<li><p><code>public StringBuilder()</code>：构造一个空的StringBuilder容器，初始容量为16个字符。</p>
+</li>
+<li><p><code>public StringBuilder(String str)</code>：构造一个StringBuilder容器，并将字符串添加进去。</p>
+<pre><code>public class StringBuilderDemo {
+    public static void main(String[] args) {
+        StringBuilder sb1 = new StringBuilder();
+        System.out.println(sb1); // (空白)
+        // 使用带参构造
+        StringBuilder sb2 = new StringBuilder(&quot;好好学习&quot;);
+        System.out.println(sb2); // 好好学习
+    }
+}</code></pre></li>
+</ul>
+<hr>
+<h2 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h2><ul>
+<li><code>public StringBuilder append(...)</code>：添加任意类型数据的字符串形式，并返回当前对象自身。</li>
+<li><code>public String toString()</code>：将当前StringBuilder对象转换为String对象。</li>
+</ul>
+<h3 id="append方法"><a href="#append方法" class="headerlink" title="append方法"></a>append方法</h3><p>append方法具有多种重载形式，可以接收任意类型的参数。任何数据作为参数都会将对应的字符串内容添加到StringBuilder中。</p>
+<pre><code>//创建对象
+StringBuilder builder = new StringBuilder();
+//public StringBuilder append(任意类型)
+StringBuilder builder2 = builder.append(&quot;hello&quot;);
+//对比一下
+System.out.println(&quot;builder:&quot;+builder);
+System.out.println(&quot;builder2:&quot;+builder2);
+System.out.println(builder == builder2); //true
+// 可以添加 任何类型
+builder.append(&quot;hello&quot;);
+builder.append(&quot;world&quot;);
+builder.append(true);
+builder.append(100);
+// 在我们开发中，会遇到调用一个方法后，返回一个对象的情况。然后使用返回的对象继续调用方法。
+// 这种时候，我们就可以把代码现在一起，如append方法一样，代码如下
+//链式编程
+builder.append(&quot;hello&quot;).append(&quot;world&quot;).append(true).append(100);
+System.out.println(&quot;builder:&quot;+builder);</code></pre><hr>
+<h3 id="toString方法"><a href="#toString方法" class="headerlink" title="toString方法"></a>toString方法</h3><p>通过toString方法，StringBuilder对象将会转换为不可变的String对象。</p>
+
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 1401362462@qq.com </span>
     </div>
@@ -468,10 +525,10 @@
 
 <div class="article_copyright">
     <p><span class="copy-title">文章标题:</span>Java中的StringBuilder类</p>
-    <p><span class="copy-title">字数:</span><span class="post-count">0</span></p>
+    <p><span class="copy-title">字数:</span><span class="post-count">550</span></p>
     <p><span class="copy-title">本文作者:</span><a  title="百xiao生">百xiao生</a></p>
     <p><span class="copy-title">发布时间:</span>2020-11-13, 17:01:30</p>
-    <p><span class="copy-title">最后更新:</span>2020-11-13, 17:01:30</p>
+    <p><span class="copy-title">最后更新:</span>2020-11-15, 23:47:44</p>
     <span class="copy-title">原始链接:</span><a class="post-url" href="/2020/11/13/Java%E4%B8%AD%E7%9A%84StringBuilder%E7%B1%BB/" title="Java中的StringBuilder类">https://baixiaoshengzjj.top/2020/11/13/Java%E4%B8%AD%E7%9A%84StringBuilder%E7%B1%BB/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">&#34;署名-非商用-相同方式共享 4.0&#34;</a> 转载请保留原文链接及作者。
