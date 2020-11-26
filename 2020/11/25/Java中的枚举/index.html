@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Android studio更换背景图 | 百xiao生</title>
-  <meta name="keywords" content=" Android studio ">
-  <meta name="description" content="Android studio更换背景图 | 百xiao生">
+  <title>Java中的枚举 | 百xiao生</title>
+  <meta name="keywords" content=" Java学习笔记 ">
+  <meta name="description" content="Java中的枚举 | 百xiao生">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="概述Java 枚举是一个特殊的类，一般表示一组常量。 由于枚举类型的实例是常量（枚举值都是 public static final 的），因此按照命名惯例，它们都用大写字母表示（如果名称中含有多个单词，使用下划线分隔）。 枚举类的定义enum Color              &#x2F;&#x2F;用enum关键字定义，默认继承Enum类 {      RED, GREEN, BLUE;   &#x2F;&#x2F;实例对象  }">
 <meta property="og:type" content="article">
@@ -430,9 +430,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-Androidstudio更换背景图" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-Java中的枚举" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">Android studio更换背景图</h1>
+        <h1 class="article-title">Java中的枚举</h1>
     
     <div class="article-meta">
         
@@ -442,19 +442,19 @@
         <span class="tag">
             <i class="iconfont icon-tag"></i>
             
-            <a class="color5">Android studio</a>
+            <a class="color4">Java学习笔记</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2020-05-11 18:37:54'>2020-04-08 18:20</time>
+            发布时间 : <time class="date" title='最后更新: 2020-11-26 15:00:30'>2020-11-25 18:23</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:106</span>
+        <span>字数:582</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -484,7 +484,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Android-studio更换背景图"><span class="toc-text">Android studio更换背景图</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#Android-studio默认背景是白色，当然，也可能是黑色（不同主题），如果你不喜欢默认的背景（就像不喜欢系统的默认背景），可以自定义背景图。"><span class="toc-text">Android studio默认背景是白色，当然，也可能是黑色（不同主题），如果你不喜欢默认的背景（就像不喜欢系统的默认背景），可以自定义背景图。</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#上图！"><span class="toc-text">上图！</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#"><span class="toc-text"></span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#-1"><span class="toc-text"></span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#-2"><span class="toc-text"></span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#-3"><span class="toc-text"> </span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#-4"><span class="toc-text"> </span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#概述"><span class="toc-text">概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#枚举类的定义"><span class="toc-text">枚举类的定义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#特性"><span class="toc-text">特性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常用方法"><span class="toc-text">常用方法</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -500,12 +500,120 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Android-studio更换背景图"><a href="#Android-studio更换背景图" class="headerlink" title="Android studio更换背景图"></a>Android studio更换背景图</h1><h6 id="Android-studio默认背景是白色，当然，也可能是黑色（不同主题），如果你不喜欢默认的背景（就像不喜欢系统的默认背景），可以自定义背景图。"><a href="#Android-studio默认背景是白色，当然，也可能是黑色（不同主题），如果你不喜欢默认的背景（就像不喜欢系统的默认背景），可以自定义背景图。" class="headerlink" title="Android studio默认背景是白色，当然，也可能是黑色（不同主题），如果你不喜欢默认的背景（就像不喜欢系统的默认背景），可以自定义背景图。"></a>Android studio默认背景是白色，当然，也可能是黑色（不同主题），如果你不喜欢默认的背景<del>（就像不喜欢系统的默认背景）</del>，可以自定义背景图。</h6><h6 id="上图！"><a href="#上图！" class="headerlink" title="上图！"></a>上图！</h6><h2 id><a href="#" class="headerlink" title></a><img src="/2020/04/08/Androidstudio%E6%9B%B4%E6%8D%A2%E8%83%8C%E6%99%AF%E5%9B%BE/1.jpg" alt></h2><h2 id="-1"><a href="#-1" class="headerlink" title></a><img src="/2020/04/08/Androidstudio%E6%9B%B4%E6%8D%A2%E8%83%8C%E6%99%AF%E5%9B%BE/2.jpg" alt></h2><h2 id="-2"><a href="#-2" class="headerlink" title></a><img src="/2020/04/08/Androidstudio%E6%9B%B4%E6%8D%A2%E8%83%8C%E6%99%AF%E5%9B%BE/3.jpg" alt></h2><p><img src="/2020/04/08/Androidstudio%E6%9B%B4%E6%8D%A2%E8%83%8C%E6%99%AF%E5%9B%BE/4.jpg" alt></p>
-<p> 不同的背景图颜色明暗不同，建议多次调节透明度，以免背景图深色部分遮挡代码。</p>
+        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>Java 枚举是一个特殊的类，一般表示一组常量。</p>
+<p>由于枚举类型的实例是常量（<strong>枚举值都是 public static final 的</strong>），因此按照命名惯例，它们都用<strong>大写</strong>字母表示（如果名称中含有多个单词，使用下划线分隔）。</p>
+<h2 id="枚举类的定义"><a href="#枚举类的定义" class="headerlink" title="枚举类的定义"></a>枚举类的定义</h2><pre><code>enum Color              //用enum关键字定义，默认继承Enum类
+{ 
+    RED, GREEN, BLUE;   //实例对象 
+} </code></pre><p>使用：</p>
+<pre><code>enum Color
+{
+    RED, GREEN, BLUE;
+}
+
+public class Test
+{
+    // 执行输出结果
+    public static void main(String[] args)
+    {
+        Color c1 = Color.RED;
+        System.out.println(c1);
+    }
+}</code></pre><p>输出结果：</p>
+<pre><code>RED</code></pre><hr>
+<p><strong>枚举 与 <code>switch</code> 配合使用：</strong></p>
+<pre><code>enum Color
+{
+    RED, GREEN, BLUE;
+}
+public class MyClass {
+  public static void main(String[] args) {
+    Color myVar = Color.BLUE;
+
+    switch(myVar) {
+      case RED:
+        System.out.println(&quot;红色&quot;);
+        break;
+      case GREEN:
+         System.out.println(&quot;绿色&quot;);
+        break;
+      case BLUE:
+        System.out.println(&quot;蓝色&quot;);
+        break;
+    }
+  }
+}</code></pre><p>输出结果：</p>
+<pre><code>蓝色</code></pre><hr>
+<h2 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h2><p>除了不能继承自一个 enum 之外，我们基本上可以将 enum 看作一个常规的类。也就是说我们可以向 enum 中添加方法。enum 甚至可以有 main() 方法。</p>
+<pre><code>enum Color
+{
+    RED, GREEN, BLUE;       //实例序列写在方法、属性之前。
+
+    // 构造函数
+    private Color()
+    {
+        System.out.println(&quot;Constructor called by : &quot; + this.toString());
+    }
+
+    public void colorInfo()
+    {
+        System.out.println(&quot;Universal Color&quot;);
+    }
+}
+
+public class Test
+{    
+    // 输出
+    public static void main(String[] args)
+    {
+        Color c1 = Color.RED;
+        System.out.println(c1);
+        c1.colorInfo();
+    }
+}</code></pre><p>输出结果：</p>
+<pre><code>Constructor called by : RED
+Constructor called by : GREEN
+Constructor called by : BLUE
+RED
+Universal Color</code></pre><ul>
+<li>注：Java 要求你必须先定义 enum 实例。如果在定义 enum 实例之前定义了任何方法或属性，那么在编译时就会得到错误信息。     –《On Java 8》</li>
+</ul>
 <hr>
-<p> 可以配合不同主题一起食用。</p>
-<p> <img src="/2020/04/08/Androidstudio%E6%9B%B4%E6%8D%A2%E8%83%8C%E6%99%AF%E5%9B%BE/IntelliJ.jpg" alt></p>
-<h2 id="-3"><a href="#-3" class="headerlink" title=" "></a> <img src="/2020/04/08/Androidstudio%E6%9B%B4%E6%8D%A2%E8%83%8C%E6%99%AF%E5%9B%BE/Darcula.jpg" alt></h2><h2 id="-4"><a href="#-4" class="headerlink" title=" "></a> <img src="/2020/04/08/Androidstudio%E6%9B%B4%E6%8D%A2%E8%83%8C%E6%99%AF%E5%9B%BE/5.jpg" alt></h2>
+<h2 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h2><ul>
+<li><p><code>values()</code>: 返回枚举类中所有的值构成的数组。</p>
+</li>
+<li><blockquote>
+<p><code>ordinal()</code>: 方法可以找到每个枚举常量的索引，就像数组索引一样。</p>
+<blockquote>
+<p>索引从0开始，顺序由枚举实例在序列中的位置（先后顺序）有关。</p>
+</blockquote>
+</blockquote>
+</li>
+<li><p><code>valueOf()</code>: 方法返回指定字符串值的枚举常量。</p>
+</li>
+</ul>
+<pre><code>enum Color
+{
+    RED, GREEN, BLUE;
+}
+
+public class Test
+{
+    public static void main(String[] args)
+    {
+        for(Color color:Color.values()){
+            System.out.println(&quot;颜色：&quot; + color.name() + &quot;-序号：&quot; + color.ordinal());
+        }
+
+        // 使用 valueOf() 返回枚举常量，不存在的会报错 IllegalArgumentException
+        System.out.println(Color.valueOf(&quot;RED&quot;));
+    }
+}</code></pre><hr>
+<ul>
+<li>enum：JDK1.5之后提供的一个关键字，用于枚举类的定义。</li>
+<li>Enum：一个抽象类，所有使用 <code>enum</code> 关键字定义的类默认继承此类。</li>
+</ul>
+
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 1401362462@qq.com </span>
     </div>
@@ -514,12 +622,12 @@
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>Android studio更换背景图</p>
-    <p><span class="copy-title">字数:</span><span class="post-count">106</span></p>
+    <p><span class="copy-title">文章标题:</span>Java中的枚举</p>
+    <p><span class="copy-title">字数:</span><span class="post-count">582</span></p>
     <p><span class="copy-title">本文作者:</span><a  title="百xiao生">百xiao生</a></p>
-    <p><span class="copy-title">发布时间:</span>2020-04-08, 18:20:45</p>
-    <p><span class="copy-title">最后更新:</span>2020-05-11, 18:37:54</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2020/04/08/Androidstudio%E6%9B%B4%E6%8D%A2%E8%83%8C%E6%99%AF%E5%9B%BE/" title="Android studio更换背景图">https://baixiaoshengzjj.top/2020/04/08/Androidstudio%E6%9B%B4%E6%8D%A2%E8%83%8C%E6%99%AF%E5%9B%BE/</a>
+    <p><span class="copy-title">发布时间:</span>2020-11-25, 18:23:35</p>
+    <p><span class="copy-title">最后更新:</span>2020-11-26, 15:00:30</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2020/11/25/Java%E4%B8%AD%E7%9A%84%E6%9E%9A%E4%B8%BE/" title="Java中的枚举">https://baixiaoshengzjj.top/2020/11/25/Java%E4%B8%AD%E7%9A%84%E6%9E%9A%E4%B8%BE/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">&#34;署名-非商用-相同方式共享 4.0&#34;</a> 转载请保留原文链接及作者。
     </p>
