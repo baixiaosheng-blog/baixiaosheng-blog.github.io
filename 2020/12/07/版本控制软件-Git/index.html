@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Android studio导入项目 | 百xiao生</title>
-  <meta name="keywords" content=" Android studio ">
-  <meta name="description" content="Android studio导入项目 | 百xiao生">
+  <title>版本控制软件—--Git | 百xiao生</title>
+  <meta name="keywords" content=" Git ">
+  <meta name="description" content="版本控制软件—--Git | 百xiao生">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="版本控制推荐文章：https:&#x2F;&#x2F;www.git-tower.com&#x2F;learn&#x2F;git&#x2F;ebook&#x2F;cn&#x2F;command-line&#x2F;basics&#x2F;why-use-version-control&#x2F; git相关配置与使用推荐视频：https:&#x2F;&#x2F;www.bilibili.com&#x2F;video&#x2F;BV1FE411P7B3?p&#x3D;1 视频同步笔记：https:&#x2F;&#x2F;mp.weixin.qq.com&#x2F;s&#x2F;Bf7u">
 <meta property="og:type" content="article">
@@ -474,9 +474,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-Android-studio导入项目" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-版本控制软件-Git" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">Android studio导入项目</h1>
+        <h1 class="article-title">版本控制软件—--Git</h1>
     
     <div class="article-meta">
         
@@ -486,7 +486,7 @@
             <i class="iconfont icon-category"></i>
             
             
-            <a  data-rel="Android">Android</a>
+            <a  data-rel="通用">通用</a>
             
         </span>
         
@@ -494,19 +494,19 @@
         <span class="tag">
             <i class="iconfont icon-tag"></i>
             
-            <a class="color5">Android studio</a>
+            <a class="color4">Git</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2020-12-07 15:11:51'>2020-03-31 22:59</time>
+            发布时间 : <time class="date" title='最后更新: 2020-12-07 09:24:33'>2020-12-07 00:11</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:252</span>
+        <span>字数:65</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -536,7 +536,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Android-studio导入工程项目"><span class="toc-text">Android studio导入工程项目</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Android-studio导入工程项目需要修改三处信息，以便软件能正常打开、编辑工程"><span class="toc-text">Android studio导入工程项目需要修改三处信息，以便软件能正常打开、编辑工程</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#第一处要修改的是Android-studio版本信息"><span class="toc-text">第一处要修改的是Android studio版本信息</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第二处要修改的是gradle-wrapper-properties文件"><span class="toc-text">第二处要修改的是gradle-wrapper.properties文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第三处要修改的是build-gradle文件"><span class="toc-text">第三处要修改的是build.gradle文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#修改完成后就可以用软件重新打开工程了！"><span class="toc-text">修改完成后就可以用软件重新打开工程了！</span></a></li></ol></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#版本控制"><span class="toc-text">版本控制</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git相关配置与使用"><span class="toc-text">git相关配置与使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git大全"><span class="toc-text">git大全</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -552,23 +552,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Android-studio导入工程项目"><a href="#Android-studio导入工程项目" class="headerlink" title="Android studio导入工程项目"></a>Android studio导入工程项目</h1><h2 id="Android-studio导入工程项目需要修改三处信息，以便软件能正常打开、编辑工程"><a href="#Android-studio导入工程项目需要修改三处信息，以便软件能正常打开、编辑工程" class="headerlink" title="Android studio导入工程项目需要修改三处信息，以便软件能正常打开、编辑工程"></a>Android studio导入工程项目需要修改三处信息，以便软件能正常打开、编辑工程</h2><p>####首先，下载工程项目（如果是压缩包，请先解压）</p>
-<hr>
-<h4 id="第一处要修改的是Android-studio版本信息"><a href="#第一处要修改的是Android-studio版本信息" class="headerlink" title="第一处要修改的是Android studio版本信息"></a>第一处要修改的是Android studio版本信息</h4><pre><code>打开刚得到的工程文件夹，修改build.gradle文件（用记事本之类的文本编辑工具打开）</code></pre><p><img src="/2020/03/31/Android-studio%E5%AF%BC%E5%85%A5%E9%A1%B9%E7%9B%AE/1.jpg" alt></p>
-<pre><code>当前使用的Android studio版本，可以打开软件查看</code></pre><p><img src="/2020/03/31/Android-studio%E5%AF%BC%E5%85%A5%E9%A1%B9%E7%9B%AE/close.jpg" alt>   </p>
-<p><img src="/2020/03/31/Android-studio%E5%AF%BC%E5%85%A5%E9%A1%B9%E7%9B%AE/version.jpg" alt> </p>
-<hr>
-<h4 id="第二处要修改的是gradle-wrapper-properties文件"><a href="#第二处要修改的是gradle-wrapper-properties文件" class="headerlink" title="第二处要修改的是gradle-wrapper.properties文件"></a>第二处要修改的是gradle-wrapper.properties文件</h4><pre><code>gradle-wrapper.properties文件路径：.../工程文件夹/gradle/wrapper/gradle-wrapper.properties</code></pre><p><img src="/2020/03/31/Android-studio%E5%AF%BC%E5%85%A5%E9%A1%B9%E7%9B%AE/2-1.jpg" alt> </p>
-<pre><code>此处版本信息可以在路径：C:/用户/用户名/.gradle/wrapper/dists下查看</code></pre><p><img src="/2020/03/31/Android-studio%E5%AF%BC%E5%85%A5%E9%A1%B9%E7%9B%AE/2-2.jpg" alt></p>
-<hr>
-<h4 id="第三处要修改的是build-gradle文件"><a href="#第三处要修改的是build-gradle文件" class="headerlink" title="第三处要修改的是build.gradle文件"></a>第三处要修改的是build.gradle文件</h4><pre><code>build.gradle文件路径：.../工程文件夹/app
-compileSdkVersion信息路径：.../SDK安装目录/platforms
-buildToolsVersion信息路径：.../SDK安装目录/build-tools</code></pre><p><img src="/2020/03/31/Android-studio%E5%AF%BC%E5%85%A5%E9%A1%B9%E7%9B%AE/3-1.jpg" alt></p>
-<p><img src="/2020/03/31/Android-studio%E5%AF%BC%E5%85%A5%E9%A1%B9%E7%9B%AE/3-2.jpg" alt></p>
-<p><img src="/2020/03/31/Android-studio%E5%AF%BC%E5%85%A5%E9%A1%B9%E7%9B%AE/3-3.jpg" alt></p>
-<hr>
-<h4 id="修改完成后就可以用软件重新打开工程了！"><a href="#修改完成后就可以用软件重新打开工程了！" class="headerlink" title="修改完成后就可以用软件重新打开工程了！"></a>修改完成后就可以用软件重新打开工程了！</h4><hr>
-<pre><code>还有哦，工程所在路径含中文名可能会报错哦~</code></pre>
+        <h2 id="版本控制"><a href="#版本控制" class="headerlink" title="版本控制"></a>版本控制</h2><p>推荐文章：<br><a href="https://www.git-tower.com/learn/git/ebook/cn/command-line/basics/why-use-version-control/" target="_blank" rel="noopener">https://www.git-tower.com/learn/git/ebook/cn/command-line/basics/why-use-version-control/</a></p>
+<h2 id="git相关配置与使用"><a href="#git相关配置与使用" class="headerlink" title="git相关配置与使用"></a>git相关配置与使用</h2><p>推荐视频：<a href="https://www.bilibili.com/video/BV1FE411P7B3?p=1" target="_blank" rel="noopener">https://www.bilibili.com/video/BV1FE411P7B3?p=1</a></p>
+<p>视频同步笔记：<a href="https://mp.weixin.qq.com/s/Bf7uVhGiu47uOELjmC5uXQ" target="_blank" rel="noopener">https://mp.weixin.qq.com/s/Bf7uVhGiu47uOELjmC5uXQ</a></p>
+<h2 id="git大全"><a href="#git大全" class="headerlink" title="git大全"></a>git大全</h2><p><a href="https://gitee.com/all-about-git" target="_blank" rel="noopener">https://gitee.com/all-about-git</a></p>
+
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 1401362462@qq.com </span>
     </div>
@@ -577,12 +565,12 @@ buildToolsVersion信息路径：.../SDK安装目录/build-tools</code></pre><p><
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>Android studio导入项目</p>
-    <p><span class="copy-title">字数:</span><span class="post-count">252</span></p>
+    <p><span class="copy-title">文章标题:</span>版本控制软件—--Git</p>
+    <p><span class="copy-title">字数:</span><span class="post-count">65</span></p>
     <p><span class="copy-title">本文作者:</span><a  title="百xiao生">百xiao生</a></p>
-    <p><span class="copy-title">发布时间:</span>2020-03-31, 22:59:53</p>
-    <p><span class="copy-title">最后更新:</span>2020-12-07, 15:11:51</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2020/03/31/Android-studio%E5%AF%BC%E5%85%A5%E9%A1%B9%E7%9B%AE/" title="Android studio导入项目">https://baixiaoshengzjj.top/2020/03/31/Android-studio%E5%AF%BC%E5%85%A5%E9%A1%B9%E7%9B%AE/</a>
+    <p><span class="copy-title">发布时间:</span>2020-12-07, 00:11:33</p>
+    <p><span class="copy-title">最后更新:</span>2020-12-07, 09:24:33</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2020/12/07/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E8%BD%AF%E4%BB%B6-Git/" title="版本控制软件—--Git">https://baixiaoshengzjj.top/2020/12/07/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E8%BD%AF%E4%BB%B6-Git/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">&#34;署名-非商用-相同方式共享 4.0&#34;</a> 转载请保留原文链接及作者。
     </p>
