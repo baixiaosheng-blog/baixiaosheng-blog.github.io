@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>androidstudio调试报错AAPT2 error check logs for details | 百xiao生</title>
+  <title>Android studio编译报错:Error inflating class null | 百xiao生</title>
   <meta name="keywords" content=" Android studio ">
-  <meta name="description" content="androidstudio调试报错AAPT2 error check logs for details | 百xiao生">
+  <meta name="description" content="Android studio编译报错:Error inflating class null | 百xiao生">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="报错详细信息E&#x2F;AndroidRuntime: FATAL EXCEPTION: main     Process: top.baixiaoshengzjj.mygraduationapplication, PID: 32630     java.lang.RuntimeException: Unable to start activity ComponentInfo{top.baixiaoshe">
 <meta property="og:type" content="article">
@@ -485,9 +485,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-androidstudio调试报错AAPT2 error check logs for details" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-Android-studio编译报错 Error inflating class null" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">androidstudio调试报错AAPT2 error check logs for details</h1>
+        <h1 class="article-title">Android studio编译报错:Error inflating class null</h1>
     
     <div class="article-meta">
         
@@ -512,12 +512,12 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2020-12-07 15:10:13'>2020-09-11 19:01</time>
+            发布时间 : <time class="date" title='最后更新: 2020-12-09 14:51:49'>2020-12-09 14:44</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:195</span>
+        <span>字数:493</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -547,7 +547,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#androidstudio调试报错AAPT2-error-check-logs-for-details"><span class="toc-text">androidstudio调试报错AAPT2 error check logs for details</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#解决之法"><span class="toc-text">解决之法</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#报错详细信息"><span class="toc-text">报错详细信息</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#原因：布局文件中的-View-控件忘了大写"><span class="toc-text">原因：布局文件中的 View 控件忘了大写</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -563,20 +563,53 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="androidstudio调试报错AAPT2-error-check-logs-for-details"><a href="#androidstudio调试报错AAPT2-error-check-logs-for-details" class="headerlink" title="androidstudio调试报错AAPT2 error check logs for details"></a>androidstudio调试报错AAPT2 error check logs for details</h1><p>  教材用的是Android studio 3.1.2，我用的是Android studio 4.0.1</p>
-<p>  <img src="/2020/09/11/androidstudio%E8%B0%83%E8%AF%95%E6%8A%A5%E9%94%99AAPT2%20error%20check%20logs%20for%20details/1.png" alt></p>
-<p>  版本回退，不会吧，当然是新出的手机香啊，当然用新版的啊！然后真机调试的时候报错了……</p>
-<p>  <img src="/2020/09/11/androidstudio%E8%B0%83%E8%AF%95%E6%8A%A5%E9%94%99AAPT2%20error%20check%20logs%20for%20details/2.png" alt></p>
-<p>  果断回退版本！<del>（真香）</del>但还是报错了，但其他回退的同学都可以（@￥%*）</p>
-<p>  还是更新到最新版香一点，但作业还是要交的，回退也解决不了，只能另寻他法了。</p>
-<hr>
-<h2 id="解决之法"><a href="#解决之法" class="headerlink" title="解决之法"></a>解决之法</h2><p> 1、在gradle.properties文件添加代码：android.enableAapt2=false</p>
-<p> <img src="/2020/09/11/androidstudio%E8%B0%83%E8%AF%95%E6%8A%A5%E9%94%99AAPT2%20error%20check%20logs%20for%20details/3.png" alt></p>
-<p> 2、Rebuild Project</p>
-<p>  <img src="/2020/09/11/androidstudio%E8%B0%83%E8%AF%95%E6%8A%A5%E9%94%99AAPT2%20error%20check%20logs%20for%20details/4.png" alt></p>
-<p> 没有完美解决，还是有警告，大概意思就是“android.enableAapt2”被弃用了，不能再使用。</p>
-<p>  <img src="/2020/09/11/androidstudio%E8%B0%83%E8%AF%95%E6%8A%A5%E9%94%99AAPT2%20error%20check%20logs%20for%20details/5.png" alt></p>
-<p> 不过调试结果跟其他同学没什么不一样，应该算是解决了。</p>
+        <h2 id="报错详细信息"><a href="#报错详细信息" class="headerlink" title="报错详细信息"></a>报错详细信息</h2><pre><code>E/AndroidRuntime: FATAL EXCEPTION: main
+    Process: top.baixiaoshengzjj.mygraduationapplication, PID: 32630
+    java.lang.RuntimeException: Unable to start activity ComponentInfo{top.baixiaoshengzjj.mygraduationapplication/top.baixiaoshengzjj.mygraduationapplication.LoginActivity}: android.view.InflateException: Binary XML file line #141 in top.baixiaoshengzjj.mygraduationapplication:layout/login_page: Binary XML file line #141 in top.baixiaoshengzjj.mygraduationapplication:layout/login_page: Error inflating class null
+        at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:3773)
+        at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3952)
+        at android.app.servertransaction.LaunchActivityItem.execute(LaunchActivityItem.java:91)
+        at android.app.servertransaction.TransactionExecutor.executeCallbacks(TransactionExecutor.java:149)
+        at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:103)
+        at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2386)
+        at android.os.Handler.dispatchMessage(Handler.java:107)
+        at android.os.Looper.loop(Looper.java:213)
+        at android.app.ActivityThread.main(ActivityThread.java:8169)
+        at java.lang.reflect.Method.invoke(Native Method)
+        at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:513)
+        at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1101)
+     Caused by: android.view.InflateException: Binary XML file line #141 in top.baixiaoshengzjj.mygraduationapplication:layout/login_page: Binary XML file line #141 in top.baixiaoshengzjj.mygraduationapplication:layout/login_page: Error inflating class null
+     Caused by: android.view.InflateException: Binary XML file line #141 in top.baixiaoshengzjj.mygraduationapplication:layout/login_page: Error inflating class null
+     Caused by: java.lang.NullPointerException: Attempt to invoke virtual method &apos;boolean java.lang.String.equals(java.lang.Object)&apos; on a null object reference
+        at android.view.LayoutInflater.tryCreateView(LayoutInflater.java:1064)
+        at android.view.LayoutInflater.createViewFromTag(LayoutInflater.java:1007)
+        at android.view.LayoutInflater.createViewFromTag(LayoutInflater.java:971)
+        at android.view.LayoutInflater.rInflate(LayoutInflater.java:1133)
+        at android.view.LayoutInflater.rInflateChildren(LayoutInflater.java:1094)
+        at android.view.LayoutInflater.rInflate(LayoutInflater.java:1136)
+        at android.view.LayoutInflater.rInflateChildren(LayoutInflater.java:1094)
+        at android.view.LayoutInflater.inflate(LayoutInflater.java:692)
+        at android.view.LayoutInflater.inflate(LayoutInflater.java:536)
+        at android.view.LayoutInflater.inflate(LayoutInflater.java:483)
+        at androidx.appcompat.app.AppCompatDelegateImpl.setContentView(AppCompatDelegateImpl.java:696)
+        at androidx.appcompat.app.AppCompatActivity.setContentView(AppCompatActivity.java:170)
+        at top.baixiaoshengzjj.mygraduationapplication.LoginActivity.onCreate(LoginActivity.java:14)
+        at android.app.Activity.performCreate(Activity.java:8086)
+        at android.app.Activity.performCreate(Activity.java:8074)
+        at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1313)
+        at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:3746)
+        at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3952)
+        at android.app.servertransaction.LaunchActivityItem.execute(LaunchActivityItem.java:91)
+        at android.app.servertransaction.TransactionExecutor.executeCallbacks(TransactionExecutor.java:149)
+        at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:103)
+        at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2386)
+        at android.os.Handler.dispatchMessage(Handler.java:107)
+        at android.os.Looper.loop(Looper.java:213)
+        at android.app.ActivityThread.main(ActivityThread.java:8169)
+        at java.lang.reflect.Method.invoke(Native Method)
+        at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:513)
+        at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1101)</code></pre><p><img src="/2020/12/09/Android-studio%E7%BC%96%E8%AF%91%E6%8A%A5%E9%94%99%20Error%20inflating%20class%20null/2.jpg" alt></p>
+<h2 id="原因：布局文件中的-View-控件忘了大写"><a href="#原因：布局文件中的-View-控件忘了大写" class="headerlink" title="原因：布局文件中的 View 控件忘了大写"></a>原因：布局文件中的 <code>View</code> 控件忘了大写</h2><p><img src="/2020/12/09/Android-studio%E7%BC%96%E8%AF%91%E6%8A%A5%E9%94%99%20Error%20inflating%20class%20null/1.jpg" alt></p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 1401362462@qq.com </span>
@@ -586,12 +619,12 @@
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>androidstudio调试报错AAPT2 error check logs for details</p>
-    <p><span class="copy-title">字数:</span><span class="post-count">195</span></p>
+    <p><span class="copy-title">文章标题:</span>Android studio编译报错:Error inflating class null</p>
+    <p><span class="copy-title">字数:</span><span class="post-count">493</span></p>
     <p><span class="copy-title">本文作者:</span><a  title="百xiao生">百xiao生</a></p>
-    <p><span class="copy-title">发布时间:</span>2020-09-11, 19:01:02</p>
-    <p><span class="copy-title">最后更新:</span>2020-12-07, 15:10:13</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2020/09/11/androidstudio%E8%B0%83%E8%AF%95%E6%8A%A5%E9%94%99AAPT2%20error%20check%20logs%20for%20details/" title="androidstudio调试报错AAPT2 error check logs for details">https://baixiaoshengzjj.top/2020/09/11/androidstudio%E8%B0%83%E8%AF%95%E6%8A%A5%E9%94%99AAPT2%20error%20check%20logs%20for%20details/</a>
+    <p><span class="copy-title">发布时间:</span>2020-12-09, 14:44:14</p>
+    <p><span class="copy-title">最后更新:</span>2020-12-09, 14:51:49</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2020/12/09/Android-studio%E7%BC%96%E8%AF%91%E6%8A%A5%E9%94%99%20Error%20inflating%20class%20null/" title="Android studio编译报错:Error inflating class null">https://baixiaoshengzjj.top/2020/12/09/Android-studio%E7%BC%96%E8%AF%91%E6%8A%A5%E9%94%99%20Error%20inflating%20class%20null/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">&#34;署名-非商用-相同方式共享 4.0&#34;</a> 转载请保留原文链接及作者。
     </p>
