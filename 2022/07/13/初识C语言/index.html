@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Java中构造器的初始化 | 百xiao生</title>
-  <meta name="keywords" content=" Java学习笔记 ">
-  <meta name="description" content="Java中构造器的初始化 | 百xiao生">
+  <title>Java中的switch语句 | 百xiao生</title>
+  <meta name="keywords" content=" C学习笔记 ">
+  <meta name="description" content="Java中的switch语句 | 百xiao生">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="计算机语言 机器语言：16个二进制数组成的指令。难学、难记、难写、难检查、难推广。 符号语言：用简单英文字母和数字表示指令，又称汇编语言。 高级语言：更接近人们使用的自然语言和数学语言，指令用于英文单词表示。  C语言程序的结构 一个程序由一个或多个源文件组成： a. 预处理指令：如 #include &lt;stdio.h&gt;。 b. 全局声明。 c. 函数定义。 一个函数包括两个部分： a">
 <meta property="og:type" content="article">
@@ -564,9 +564,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-Java中构造器的初始化" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-初识C语言" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">Java中构造器的初始化</h1>
+        <h1 class="article-title">Java中的switch语句</h1>
     
     <div class="article-meta">
         
@@ -576,7 +576,7 @@
             <i class="iconfont icon-category"></i>
             
             
-            <a  data-rel="Java">Java</a>
+            <a  data-rel="C语言">C语言</a>
             
         </span>
         
@@ -584,19 +584,19 @@
         <span class="tag">
             <i class="iconfont icon-tag"></i>
             
-            <a class="color4">Java学习笔记</a>
+            <a class="color1">C学习笔记</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2020-12-07 15:08:22'>2020-11-19 20:52</time>
+            发布时间 : <time class="date" title='最后更新: 2022-07-13 20:08:54'>2022-07-13 17:20</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:346</span>
+        <span>字数:262</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -626,7 +626,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#概述"><span class="toc-text">概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#初始化的顺序"><span class="toc-text">初始化的顺序</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#计算机语言"><span class="toc-text">计算机语言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#C语言程序的结构"><span class="toc-text">C语言程序的结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#运行C程序的步骤"><span class="toc-text">运行C程序的步骤</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -642,51 +642,23 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>当一个对象被创建时候，构造方法用来初始化该对象，给对象的成员变量赋初始值。</p>
-<blockquote>
-<p>无论你与否自定义构造方法，所有的类都有构造方法，因为Java自动提供了一个无参数构造方法，<br> 一旦自己定义了构造方法，Java自动提供的默认无参数构造方法就会失效（自定义有参构造后仍需要无参构造要记得自己定义哦O(∩_∩)O）。</p>
-<blockquote>
-<p>组合快捷键 <code>Alt+Insert</code> 可以快速生成全参构造和无参构造。</p>
-</blockquote>
-</blockquote>
-<hr>
-<h2 id="初始化的顺序"><a href="#初始化的顺序" class="headerlink" title="初始化的顺序"></a>初始化的顺序</h2><pre><code>class Window {
-    Window(int marker) {
-        System.out.println(&quot;Window(&quot; + marker + &quot;)&quot;);
-    }
-}
-
-class House {
-    Window w1 = new Window(1); // Before constructor
-
-    House() {
-        // Show that we&apos;re in the constructor:
-        System.out.println(&quot;House()&quot;);
-        w3 = new Window(33); // Reinitialize w3
-    }
-
-    Window w2 = new Window(2); // After constructor
-
-    void f() {
-        System.out.println(&quot;f()&quot;);
-    }
-
-    Window w3 = new Window(3); // At end
-}
-
-public class OrderOfInitialization {
-    public static void main(String[] args) {
-        House h = new House();
-        h.f(); // Shows that construction is done
-    }
-}
-//代码来源：On Java 8》</code></pre><p>输出：</p>
-<pre><code>Window(1)
-Window(2)
-Window(3)
-House()
-Window(33)
-f()</code></pre><p>从输出结果可以看出，虽然几个 <strong>Window</strong> 对象位置不同，但都先于 <strong>House</strong> 类的构造方法执行。<br>印证了“构造方法用来初始化该对象，<u>给对象的成员变量赋初始值</u>”。（在House类中，Window对象就是变量，在使用之前，先初始化变量）</p>
+        <h3 id="计算机语言"><a href="#计算机语言" class="headerlink" title="计算机语言"></a>计算机语言</h3><ol>
+<li>机器语言：16个二进制数组成的指令。难学、难记、难写、难检查、难推广。</li>
+<li>符号语言：用简单英文字母和数字表示指令，又称<code>汇编语言</code>。</li>
+<li>高级语言：更接近人们使用的自然语言和数学语言，指令用于英文单词表示。</li>
+</ol>
+<h3 id="C语言程序的结构"><a href="#C语言程序的结构" class="headerlink" title="C语言程序的结构"></a>C语言程序的结构</h3><ol>
+<li>一个程序由一个或多个源文件组成：<br> a. 预处理指令：如 #include &lt;stdio.h&gt;。<br> b. 全局声明。<br> c. 函数定义。</li>
+<li>一个函数包括两个部分：<br> a. 函数部首：函数类型、函数名、函数参数。<br> b. 函数体。</li>
+<li>程序总是从 <code>main</code> 函数开始执行的。</li>
+<li>在每个数据声明和语句的最后必须有一个分号。</li>
+</ol>
+<h3 id="运行C程序的步骤"><a href="#运行C程序的步骤" class="headerlink" title="运行C程序的步骤"></a>运行C程序的步骤</h3><ol>
+<li>编写C程序。</li>
+<li>编译：预编译–&gt;加载头文件等预处理；然后编译，得到二进制文件。</li>
+<li>连接：连接其他模块二进制文件及库函数得到可执行文件（executive program）。</li>
+<li>执行。<br> <img src="/2022/07/13/%E5%88%9D%E8%AF%86C%E8%AF%AD%E8%A8%80/1.jpeg" alt></li>
+</ol>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 1401362462@qq.com </span>
@@ -696,12 +668,12 @@ f()</code></pre><p>从输出结果可以看出，虽然几个 <strong>Window</st
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>Java中构造器的初始化</p>
-    <p><span class="copy-title">字数:</span><span class="post-count">346</span></p>
+    <p><span class="copy-title">文章标题:</span>Java中的switch语句</p>
+    <p><span class="copy-title">字数:</span><span class="post-count">262</span></p>
     <p><span class="copy-title">本文作者:</span><a  title="百xiao生">百xiao生</a></p>
-    <p><span class="copy-title">发布时间:</span>2020-11-19, 20:52:49</p>
-    <p><span class="copy-title">最后更新:</span>2020-12-07, 15:08:22</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2020/11/19/Java%E4%B8%AD%E6%9E%84%E9%80%A0%E5%99%A8%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96/" title="Java中构造器的初始化">https://baixiaoshengzjj.top/2020/11/19/Java%E4%B8%AD%E6%9E%84%E9%80%A0%E5%99%A8%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96/</a>
+    <p><span class="copy-title">发布时间:</span>2022-07-13, 17:20:11</p>
+    <p><span class="copy-title">最后更新:</span>2022-07-13, 20:08:54</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2022/07/13/%E5%88%9D%E8%AF%86C%E8%AF%AD%E8%A8%80/" title="Java中的switch语句">https://baixiaoshengzjj.top/2022/07/13/%E5%88%9D%E8%AF%86C%E8%AF%AD%E8%A8%80/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">&#34;署名-非商用-相同方式共享 4.0&#34;</a> 转载请保留原文链接及作者。
     </p>
