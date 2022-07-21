@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Java中的static关键字 | 百xiao生</title>
-  <meta name="keywords" content=" Java学习笔记 ">
-  <meta name="description" content="Java中的static关键字 | 百xiao生">
+  <title>C语言中的数据类型.md | 百xiao生</title>
+  <meta name="keywords" content=" C学习笔记 ">
+  <meta name="description" content="C语言中的数据类型.md | 百xiao生">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="计算机语言 机器语言：16个二进制数组成的指令。难学、难记、难写、难检查、难推广。 符号语言：用简单英文字母和数字表示指令，又称汇编语言。 高级语言：更接近人们使用的自然语言和数学语言，指令用于英文单词表示。  C语言程序的结构 一个程序由一个或多个源文件组成： a. 预处理指令：如 #include &lt;stdio.h&gt;。 b. 全局声明。 c. 函数定义。 一个函数包括两个部分： a">
 <meta property="og:type" content="article">
@@ -572,9 +572,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-Java中的static关键字" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-数据类型" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">Java中的static关键字</h1>
+        <h1 class="article-title">C语言中的数据类型.md</h1>
     
     <div class="article-meta">
         
@@ -584,7 +584,7 @@
             <i class="iconfont icon-category"></i>
             
             
-            <a  data-rel="Java">Java</a>
+            <a  data-rel="C语言">C语言</a>
             
         </span>
         
@@ -592,19 +592,19 @@
         <span class="tag">
             <i class="iconfont icon-tag"></i>
             
-            <a class="color4">Java学习笔记</a>
+            <a class="color1">C学习笔记</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2020-12-07 15:09:21'>2020-11-07 22:53</time>
+            发布时间 : <time class="date" title='最后更新: 2022-07-22 00:07:15'>2022-07-16 23:04</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:847</span>
+        <span>字数:242</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -634,7 +634,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#概述"><span class="toc-text">概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#静态数据的初始化"><span class="toc-text">静态数据的初始化</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#常量"><span class="toc-text">常量</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -650,99 +650,77 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>类是对象的外观及行为方式的描述。通常只有在使用 new 创建那个类的对象后，数据存储空间才被分配，对象的方法才能供外界调用。这种方式在两种情况下是不足的：</p>
-<ol>
-<li><p>有时你只想为特定字段（注：也称为属性、域）分配一个共享存储空间，而不去考虑究竟要创建多少对象，甚至根本就不创建对象。</p>
+        <blockquote>
+<h2 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h2><ol>
+<li><p>整型常量。如整数，0，10，-300。</p>
 </li>
-<li><p>创建一个与此类的任何对象无关的方法。也就是说，即使没有创建对象，也能调用该方法。</p>
+<li><p>实型常量。<br>   a. 十进制小数，3.14，-2.718，110.119<br>   b. 指数形式，3.14e5(3.14×10^5^ )，-2.718E-5(-2.718×10^-5^)，<u>以e或E表示10为底的指数时，e或E之前必须有数字，e或E后必须为整数</u></p>
+</li>
+<li><p>字符常量。<br>   a. 普通字符 ，英文单引号括起来的一个字符，形如：’a’、’B’、’!’，在存储单元中存储的是字符在编码表中的代码，如 字符 ‘a’在ASCII表中的代码是97.<br>   b. 转义字符，以字符“\”开头的字符序列，如：’\n’、’\t’ 。</p>
+<table>
+<thead>
+<tr>
+<th align="center">转义字符</th>
+<th align="center">含义</th>
+<th align="center"></th>
+<th align="center">转义字符</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">\‘</td>
+<td align="center">一个单引号(‘)</td>
+<td align="center"></td>
+<td align="center">\n</td>
+<td align="center">换行</td>
+</tr>
+<tr>
+<td align="center">\“</td>
+<td align="center">一个双引号(“)</td>
+<td align="center"></td>
+<td align="center">\r</td>
+<td align="center">回车</td>
+</tr>
+<tr>
+<td align="center">\?</td>
+<td align="center">一个问号(?)</td>
+<td align="center"></td>
+<td align="center">\t</td>
+<td align="center">水平制表符</td>
+</tr>
+<tr>
+<td align="center">\\</td>
+<td align="center">一个反斜杠()</td>
+<td align="center"></td>
+<td align="center">\v</td>
+<td align="center">垂直制表符</td>
+</tr>
+<tr>
+<td align="center">\a</td>
+<td align="center">告警或哔声</td>
+<td align="center"></td>
+<td align="center">\000其中0代表八进制数字</td>
+<td align="center">八进制数</td>
+</tr>
+<tr>
+<td align="center">\b</td>
+<td align="center">退格</td>
+<td align="center"></td>
+<td align="center">\xhh其中h代表十六进制数字</td>
+<td align="center">十六进制数</td>
+</tr>
+<tr>
+<td align="center">\f</td>
+<td align="center">换页</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody></table>
 </li>
 </ol>
-<p>static 关键字就符合上述两点要求。当我们说某个事物是静态时，就意味着该字段或方法不依赖于任何特定的对象实例 。 即使我们从未创建过该类的对象，也可以调用其静态方法或访问其静态字段。<br>相反，对于普通的非静态字段和方法，我们必须要先创建一个对象并使用该对象来访问字段或方法，因为非静态字段和方法必须与特定对象关联</p>
-<p><em>引用静态变量有两种方法</em>。  我们通过一个对象来定位它，我们也可以通过类名直接引用它，但这种方式对于非静态成员则不可行，<strong>使用类名直接引用静态变量是首选方法，因为它强调了变量的静态属性</strong>。</p>
-<ul>
-<li>static方法只允许调用static属性和static方法</li>
-</ul>
-<h2 id="静态数据的初始化"><a href="#静态数据的初始化" class="headerlink" title="静态数据的初始化"></a>静态数据的初始化</h2><pre><code>class Bowl {
-    Bowl(int marker) {
-        System.out.println(&quot;Bowl(&quot; + marker + &quot;)&quot;);
-    }
-
-    void f1(int marker) {
-        System.out.println(&quot;f1(&quot; + marker + &quot;)&quot;);
-    }
-}
-
-class Table {
-    static Bowl bowl1 = new Bowl(1);
-
-    Table() {
-        System.out.println(&quot;Table()&quot;);
-        bowl2.f1(1);
-    }
-
-    void f2(int marker) {
-        System.out.println(&quot;f2(&quot; + marker + &quot;)&quot;);
-    }
-
-    static Bowl bowl2 = new Bowl(2);
-}
-
-class Cupboard {
-    Bowl bowl3 = new Bowl(3);
-    static Bowl bowl4 = new Bowl(4);
-
-    Cupboard() {
-        System.out.println(&quot;Cupboard()&quot;);
-        bowl4.f1(2);
-    }
-
-    void f3(int marker) {
-        System.out.println(&quot;f3(&quot; + marker + &quot;)&quot;);
-    }
-
-    static Bowl bowl5 = new Bowl(5);
-}
-
-public class StaticInitialization {
-    public static void main(String[] args) {
-        System.out.println(&quot;main creating new Cupboard()&quot;);
-        new Cupboard();
-        System.out.println(&quot;main creating new Cupboard()&quot;);
-        new Cupboard();
-        table.f2(1);
-        cupboard.f3(1);
-    }
-
-    static Table table = new Table();
-    static Cupboard cupboard = new Cupboard();
-}
-//代码来源：《On Java 8》</code></pre><p>输出：</p>
-<pre><code>Bowl(1)
-Bowl(2)
-Table()
-f1(1)
-Bowl(4)
-Bowl(5)
-Bowl(3)
-Cupboard()
-f1(2)
-main creating new Cupboard()
-Bowl(3)
-Cupboard()
-f1(2)
-main creating new Cupboard()
-Bowl(3)
-Cupboard()
-f1(2)
-f2(1)
-f3(1)</code></pre><p>要执行 main() 方法，必须加载 StaticInitialization 类，它的静态属性 table 和 cupboard 随后被初始化，这会导致它们对应的类也被加载，而由于它们都包含静态的 Bowl 对象，所以 Bowl 类也会被加载。因此，在这个特殊的程序中，所有的类都会在 main() 方法之前被加载。</p>
-<p>总结：</p>
-<ul>
-<li><p>静态初始化只有在必要时刻才会进行。如果不创建 Table 对象，也不引用 Table.bowl1 或 Table.bowl2，那么静态的 Bowl 类对象 bowl1 和 bowl2 永远不会被创建（不创建Table对象，输出没有前四行）。只有在第一个 Table 对象被创建（或被访问）时，它们才会被初始化。此后，静态对象不会再次被初始化。</p>
-</li>
-<li><p>初始化的顺序先是静态对象（如果它们之前没有被初始化的话），然后是非静态对象（输出结果先是Bowl(4)、Bowl(5)，然后才是Bowl(3)）</p>
-</li>
-</ul>
+<p>4.</p>
+</blockquote>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 1401362462@qq.com </span>
@@ -752,12 +730,12 @@ f3(1)</code></pre><p>要执行 main() 方法，必须加载 StaticInitialization
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>Java中的static关键字</p>
-    <p><span class="copy-title">字数:</span><span class="post-count">847</span></p>
+    <p><span class="copy-title">文章标题:</span>C语言中的数据类型.md</p>
+    <p><span class="copy-title">字数:</span><span class="post-count">242</span></p>
     <p><span class="copy-title">本文作者:</span><a  title="百xiao生">百xiao生</a></p>
-    <p><span class="copy-title">发布时间:</span>2020-11-07, 22:53:41</p>
-    <p><span class="copy-title">最后更新:</span>2020-12-07, 15:09:21</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2020/11/07/Java%E4%B8%AD%E7%9A%84static%E5%85%B3%E9%94%AE%E5%AD%97/" title="Java中的static关键字">https://baixiaoshengzjj.top/2020/11/07/Java%E4%B8%AD%E7%9A%84static%E5%85%B3%E9%94%AE%E5%AD%97/</a>
+    <p><span class="copy-title">发布时间:</span>2022-07-16, 23:04:25</p>
+    <p><span class="copy-title">最后更新:</span>2022-07-22, 00:07:15</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2022/07/16/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" title="C语言中的数据类型.md">https://baixiaoshengzjj.top/2022/07/16/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">&#34;署名-非商用-相同方式共享 4.0&#34;</a> 转载请保留原文链接及作者。
     </p>
