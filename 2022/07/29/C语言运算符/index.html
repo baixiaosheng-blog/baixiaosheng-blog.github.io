@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>androidstudio调试报错AAPT2 error check logs for details | 百xiao生</title>
-  <meta name="keywords" content=" Android studio ">
-  <meta name="description" content="androidstudio调试报错AAPT2 error check logs for details | 百xiao生">
+  <title>C语言运算符 | 百xiao生</title>
+  <meta name="keywords" content=" C学习笔记 ">
+  <meta name="description" content="C语言运算符 | 百xiao生">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="做毕业设计想搞点精致一些的登录界面偶然搜到了比较炫酷的设计，想着学习一下实现的代码，做成自己想要的效果  博客链接 https:&#x2F;&#x2F;www.jianshu.com&#x2F;p&#x2F;fdf8b2727305  源码链接 https:&#x2F;&#x2F;github.com&#x2F;Allenhan123&#x2F;MaterialLogin   源码作者给的效果图 ↓   然而，然而并不行，经过多番调试，它可以了 修改后的源码链接 https:">
 <meta property="og:type" content="article">
@@ -580,9 +580,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-androidstudio调试报错AAPT2 error check logs for details" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-C语言运算符" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">androidstudio调试报错AAPT2 error check logs for details</h1>
+        <h1 class="article-title">C语言运算符</h1>
     
     <div class="article-meta">
         
@@ -592,7 +592,7 @@
             <i class="iconfont icon-category"></i>
             
             
-            <a  data-rel="Android">Android</a>
+            <a  data-rel="C语言">C语言</a>
             
         </span>
         
@@ -600,19 +600,19 @@
         <span class="tag">
             <i class="iconfont icon-tag"></i>
             
-            <a class="color5">Android studio</a>
+            <a class="color1">C学习笔记</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2020-12-07 15:10:13'>2020-09-11 19:01</time>
+            发布时间 : <time class="date" title='最后更新: 2022-07-29 23:47:34'>2022-07-29 23:46</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:195</span>
+        <span>字数:0</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -642,7 +642,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#androidstudio调试报错AAPT2-error-check-logs-for-details"><span class="toc-text">androidstudio调试报错AAPT2 error check logs for details</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#解决之法"><span class="toc-text">解决之法</span></a></li></ol></li></ol>
+        
     
 <style>
     .left-col .switch-btn,
@@ -658,21 +658,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="androidstudio调试报错AAPT2-error-check-logs-for-details"><a href="#androidstudio调试报错AAPT2-error-check-logs-for-details" class="headerlink" title="androidstudio调试报错AAPT2 error check logs for details"></a>androidstudio调试报错AAPT2 error check logs for details</h1><p>  教材用的是Android studio 3.1.2，我用的是Android studio 4.0.1</p>
-<p>  <img src="/2020/09/11/androidstudio%E8%B0%83%E8%AF%95%E6%8A%A5%E9%94%99AAPT2%20error%20check%20logs%20for%20details/1.png" alt></p>
-<p>  版本回退，不会吧，当然是新出的手机香啊，当然用新版的啊！然后真机调试的时候报错了……</p>
-<p>  <img src="/2020/09/11/androidstudio%E8%B0%83%E8%AF%95%E6%8A%A5%E9%94%99AAPT2%20error%20check%20logs%20for%20details/2.png" alt></p>
-<p>  果断回退版本！<del>（真香）</del>但还是报错了，但其他回退的同学都可以（@￥%*）</p>
-<p>  还是更新到最新版香一点，但作业还是要交的，回退也解决不了，只能另寻他法了。</p>
-<hr>
-<h2 id="解决之法"><a href="#解决之法" class="headerlink" title="解决之法"></a>解决之法</h2><p> 1、在gradle.properties文件添加代码：android.enableAapt2=false</p>
-<p> <img src="/2020/09/11/androidstudio%E8%B0%83%E8%AF%95%E6%8A%A5%E9%94%99AAPT2%20error%20check%20logs%20for%20details/3.png" alt></p>
-<p> 2、Rebuild Project</p>
-<p>  <img src="/2020/09/11/androidstudio%E8%B0%83%E8%AF%95%E6%8A%A5%E9%94%99AAPT2%20error%20check%20logs%20for%20details/4.png" alt></p>
-<p> 没有完美解决，还是有警告，大概意思就是“android.enableAapt2”被弃用了，不能再使用。</p>
-<p>  <img src="/2020/09/11/androidstudio%E8%B0%83%E8%AF%95%E6%8A%A5%E9%94%99AAPT2%20error%20check%20logs%20for%20details/5.png" alt></p>
-<p> 不过调试结果跟其他同学没什么不一样，应该算是解决了。</p>
-
+        
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 1401362462@qq.com </span>
     </div>
@@ -681,12 +667,12 @@
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>androidstudio调试报错AAPT2 error check logs for details</p>
-    <p><span class="copy-title">字数:</span><span class="post-count">195</span></p>
+    <p><span class="copy-title">文章标题:</span>C语言运算符</p>
+    <p><span class="copy-title">字数:</span><span class="post-count">0</span></p>
     <p><span class="copy-title">本文作者:</span><a  title="百xiao生">百xiao生</a></p>
-    <p><span class="copy-title">发布时间:</span>2020-09-11, 19:01:02</p>
-    <p><span class="copy-title">最后更新:</span>2020-12-07, 15:10:13</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2020/09/11/androidstudio%E8%B0%83%E8%AF%95%E6%8A%A5%E9%94%99AAPT2%20error%20check%20logs%20for%20details/" title="androidstudio调试报错AAPT2 error check logs for details">https://baixiaoshengzjj.top/2020/09/11/androidstudio%E8%B0%83%E8%AF%95%E6%8A%A5%E9%94%99AAPT2%20error%20check%20logs%20for%20details/</a>
+    <p><span class="copy-title">发布时间:</span>2022-07-29, 23:46:30</p>
+    <p><span class="copy-title">最后更新:</span>2022-07-29, 23:47:34</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2022/07/29/C%E8%AF%AD%E8%A8%80%E8%BF%90%E7%AE%97%E7%AC%A6/" title="C语言运算符">https://baixiaoshengzjj.top/2022/07/29/C%E8%AF%AD%E8%A8%80%E8%BF%90%E7%AE%97%E7%AC%A6/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">&#34;署名-非商用-相同方式共享 4.0&#34;</a> 转载请保留原文链接及作者。
     </p>
