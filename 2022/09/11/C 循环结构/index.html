@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Java中的基本数据类型 | 百xiao生</title>
-  <meta name="keywords" content=" Java学习笔记 ">
-  <meta name="description" content="Java中的基本数据类型 | 百xiao生">
+  <title>C 循环结构 | 百xiao生</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="C 循环结构 | 百xiao生">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C 循环结构">
@@ -607,39 +607,24 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-Java中的基本数据类型" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-C 循环结构" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">Java中的基本数据类型</h1>
+        <h1 class="article-title">C 循环结构</h1>
     
     <div class="article-meta">
         
         
         
-        <span class="book">
-            <i class="iconfont icon-category"></i>
-            
-            
-            <a  data-rel="Java">Java</a>
-            
-        </span>
-        
-        
-        <span class="tag">
-            <i class="iconfont icon-tag"></i>
-            
-            <a class="color4">Java学习笔记</a>
-            
-        </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2020-12-07 15:08:47'>2020-11-06 18:32</time>
+            发布时间 : <time class="date" title='最后更新: 2022-09-11 21:38:31'>2022-09-11 19:01</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:1.6k</span>
+        <span>字数:0</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -669,7 +654,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Java中基本类型默认值"><span class="toc-text">Java中基本类型默认值</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#基本类型的存储"><span class="toc-text">基本类型的存储</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#类型提升"><span class="toc-text">类型提升</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#高精度数值"><span class="toc-text">高精度数值</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Java没有sizeof"><span class="toc-text">Java没有sizeof</span></a></li></ol>
+        
     
 <style>
     .left-col .switch-btn,
@@ -685,176 +670,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Java中基本类型默认值"><a href="#Java中基本类型默认值" class="headerlink" title="Java中基本类型默认值"></a>Java中基本类型默认值</h1><p>如果类的成员变量是基本类型，那么在类初始化时，这些类型将会被赋予一个初始值。<br>这些默认值仅在 Java 初始化类的时候才会被赋予。这种方式确保了基本类型的字段始终能被初始化（在 C++ 中不会），从而减少了 bug 的来源。<strong>但是</strong>，<u>这些初始值对于程序来说并不一定是合法或者正确的</u>。<br><strong>所以</strong>，为了安全，<u>我们最好始终显式地初始化变量</u>。  </p>
-<table>
-<thead>
-<tr>
-<th align="center">基本类型</th>
-<th align="center">初始值</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">boolean</td>
-<td align="center">false</td>
-</tr>
-<tr>
-<td align="center">char</td>
-<td align="center">\u0000 (null)</td>
-</tr>
-<tr>
-<td align="center">byte</td>
-<td align="center">(byte) 0</td>
-</tr>
-<tr>
-<td align="center">short</td>
-<td align="center">(short) 0</td>
-</tr>
-<tr>
-<td align="center">int</td>
-<td align="center">0</td>
-</tr>
-<tr>
-<td align="center">long</td>
-<td align="center">0L</td>
-</tr>
-<tr>
-<td align="center">float</td>
-<td align="center">0.0f</td>
-</tr>
-<tr>
-<td align="center">double</td>
-<td align="center">0.0d</td>
-</tr>
-</tbody></table>
-<p>这种默认值的赋予并不适用于局部变量 —— 那些不属于类的字段的变量(即非成员变量)。</p>
-<p>因此，<u>若在方法中定义的基本类型数据</u>，这里的变量 b <u>不会自动初始化</u>为0，因而在使用变量 b 之前，程序员有责任主动地为其赋值（和 C 、C++ 一致）。如果我们忘记了这一步， <u>Java 将会提示我们“编译时错误，该变量可能尚未被初始化”</u>。这一点做的比 C++ 更好，在后者中，编译器只是提示警告，而在 Java 中则直接报错。</p>
-<pre><code>class demo{
-    int a；
-
-    public void show（）{
-        int b；  //报错：Unreachable statement
-        ……
-    }
-}    </code></pre><hr>
-<h1 id="基本类型的存储"><a href="#基本类型的存储" class="headerlink" title="基本类型的存储"></a>基本类型的存储</h1><p>基本类型的创建，Java 使用了和 C/C++ 一样的策略，变量直接存储”值”，并置于栈内存中，因此更加高效。</p>
-<p>Java 确定了每种基本类型的内存占用大小。 这些大小不会像其他一些语言那样随着机器环境的变化而变化。这种不变性也是 Java 更具可移植性的一个原因。</p>
-<table>
-<thead>
-<tr>
-<th align="center">基本类型</th>
-<th align="center">大小</th>
-<th align="center">最小值</th>
-<th align="center">最大值</th>
-<th align="center">包装类型</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">boolean</td>
-<td align="center">—</td>
-<td align="center">—</td>
-<td align="center">—</td>
-<td align="center">Boolean</td>
-</tr>
-<tr>
-<td align="center">char</td>
-<td align="center">16 bits</td>
-<td align="center">Unicode 0</td>
-<td align="center">Unicode 216 -1</td>
-<td align="center">Character</td>
-</tr>
-<tr>
-<td align="center">byte</td>
-<td align="center">8 bits</td>
-<td align="center">-128</td>
-<td align="center">+127</td>
-<td align="center">Byte</td>
-</tr>
-<tr>
-<td align="center">short</td>
-<td align="center">16 bits</td>
-<td align="center">- 2<sup>15<sup></sup></sup></td>
-<td align="center">+ 2<sup>15<sup> -1</sup></sup></td>
-<td align="center">Short</td>
-</tr>
-<tr>
-<td align="center">int</td>
-<td align="center">32 bits</td>
-<td align="center">- 2<sup>31<sup></sup></sup></td>
-<td align="center">+ 2<sup>31<sup> -1</sup></sup></td>
-<td align="center">Integer</td>
-</tr>
-<tr>
-<td align="center">long</td>
-<td align="center">64 bits</td>
-<td align="center">- 2<sup>63<sup></sup></sup></td>
-<td align="center">+ 2<sup>63<sup> -1</sup></sup></td>
-<td align="center">Long</td>
-</tr>
-<tr>
-<td align="center">float</td>
-<td align="center">32 bits</td>
-<td align="center">IEEE754</td>
-<td align="center">IEEE754</td>
-<td align="center">Float</td>
-</tr>
-<tr>
-<td align="center">double</td>
-<td align="center">64 bits</td>
-<td align="center">IEEE754</td>
-<td align="center">IEEE754</td>
-<td align="center">Double</td>
-</tr>
-<tr>
-<td align="center">void</td>
-<td align="center">—</td>
-<td align="center">—</td>
-<td align="center">—</td>
-<td align="center">—</td>
-</tr>
-</tbody></table>
-<p>所有的数值类型都是有正/负符号的。布尔（boolean）类型的大小没有明确的规定，通常定义为取字面值 “true” 或 “false” 。基本类型有自己对应的包装类型，如果你希望在堆内存里表示基本类型的数据，就需要用到它们的包装类。</p>
-<hr>
-<h1 id="类型提升"><a href="#类型提升" class="headerlink" title="类型提升"></a>类型提升</h1><p>对小于 int 的基本数据类型（即 char、byte 或 short）执行任何算术或按位操作，这些值会在执行操作之前类型提升为 int，并且结果值的类型为 int。若想重新使用较小的类型，必须使用强制转换（由于重新分配回一个较小的类型，结果可能会丢失精度）。通常，表达式中最大的数据类型是决定表达式结果的数据类型。float 型和 double 型相乘，结果是 double 型的；int 和 long 相加，结果是 long 型。</p>
-<p>在“+”运算时，若<strong>表达式含有 String 类型数据</strong>，其他非字符串数据都将被转换为字符串形式并连接。（也就是说“+”是字符串运算符，而不是算术运算符）。</p>
-<pre><code>public class Test {
-    public static void main(String[] args) {
-        int x = 0, y = 1, z = 2;
-        String s = &quot;x, y, z &quot;;
-        System.out.println(s + x + y + z);
-        System.out.println(&quot;===========&quot;);
-        // 将 x 转换为字符串
-        System.out.println(x + &quot; &quot; + s);
-        System.out.println(&quot;===========&quot;);
-        s += &quot;(summed) = &quot;; 
-        // 级联操作
-        System.out.println(s + (x + y + z));
-        System.out.println(&quot;===========&quot;);
-        // Integer.toString()方法的简写:
-        System.out.println(&quot;&quot; + x + y);
-
-    }
-}</code></pre><p>输出结果：</p>
-<pre><code>x, y, z 012             // 结果中的“012”表明x+y+z没有进行算术运算
-===========
-0 x, y, z               //最前面的“0”其实是字符串类型，已被编译器转换
-===========
-x, y, z (summed) = 3    //输出结果的“3”表明：括号 () 可以控制表达式的计算顺序，以便在显示 int 之前对其进行实际求和。
-===========
-01                      //结果为“01”而不是“1”，即结果为字符串类型，也就是说，可以使用&quot;&quot;(空字符串)与基本数据类型相连，实现基本数据类型转换为字符串，
-                        //而不使用其包装类的静态方法或String类的静态方法。</code></pre><hr>
-<h1 id="高精度数值"><a href="#高精度数值" class="headerlink" title="高精度数值"></a>高精度数值</h1><p>在 Java 中有两种类型的数据可用于高精度的计算。它们是 <code>BigInteger</code> 和 <code>BigDecimal</code>。尽管它们大致可以划归为“包装类型”，但是它们并没有对应的基本类型。</p>
-<pre><code>1.  `BigInteger` ： 不可变的任意精度的整数。所有操作中，都以二进制补码形式表示 BigInteger（如 Java 的基本整数类型）。BigInteger 提供所有 Java 的基本整数操作符的对应物，并提供 java.lang.Math 的所有相关方法。
-另外，BigInteger 还提供以下运算：模算术、GCD 计算、质数测试、素数生成、位操作以及一些其他操作。
-
-2.  `BigDecimal` ： 不可变的、任意精度的有符号十进制数。BigDecimal 由任意精度的整数非标度值 和 32 位的整数标度 (scale) 组成。如果为零或正数，则标度是小数点后的位数。如果为负数，则将该数的非标度值乘以 10 的负 scale 次幂。
-因此，BigDecimal 表示的数值是 (unscaledValue × 10-scale)。
-
-    BigDecimal 类提供以下操作：算术、标度操作、舍入、比较、哈希算法和格式转换。toString() 方法提供 BigDecimal 的规范表示形式。
-
----两个类均属于java.math包。</code></pre><hr>
-<h1 id="Java没有sizeof"><a href="#Java没有sizeof" class="headerlink" title="Java没有sizeof"></a>Java没有sizeof</h1><p>在 C/C++ 中，经常需要用到 <code>sizeof()</code> 方法来获取数据项被分配的字节大小。C/C++ 中使用 <code>sizeof()</code> 最有说服力的原因是为了移植性，不同数据在不同机器上可能有不同的大小，所以在进行大小敏感的运算时，程序员必须对这些类型有多大做到心中有数。例如，一台计算机可用 32 位来保存整数，而另一台只用 16 位保存。显然，在第一台机器中，程序可保存更大的值。所以，移植是令 C/C++ 程序员颇为头痛的一个问题。</p>
-<p>Java 不需要  <code>sizeof()</code> 方法来满足这种需求，因为所有类型的大小在不同平台上是相同的。我们不必考虑这个层次的移植问题 —— Java 本身就是一种“与平台无关”的语言。<br>                                                    –《Thinking In Java》</p>
-
+        
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 1401362462@qq.com </span>
     </div>
@@ -863,12 +679,12 @@ x, y, z (summed) = 3    //输出结果的“3”表明：括号 () 可以控制�
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>Java中的基本数据类型</p>
-    <p><span class="copy-title">字数:</span><span class="post-count">1.6k</span></p>
+    <p><span class="copy-title">文章标题:</span>C 循环结构</p>
+    <p><span class="copy-title">字数:</span><span class="post-count">0</span></p>
     <p><span class="copy-title">本文作者:</span><a  title="百xiao生">百xiao生</a></p>
-    <p><span class="copy-title">发布时间:</span>2020-11-06, 18:32:05</p>
-    <p><span class="copy-title">最后更新:</span>2020-12-07, 15:08:47</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2020/11/06/Java%E4%B8%AD%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" title="Java中的基本数据类型">https://baixiaoshengzjj.top/2020/11/06/Java%E4%B8%AD%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</a>
+    <p><span class="copy-title">发布时间:</span>2022-09-11, 19:01:37</p>
+    <p><span class="copy-title">最后更新:</span>2022-09-11, 21:38:31</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2022/09/11/C%20%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84/" title="C 循环结构">https://baixiaoshengzjj.top/2022/09/11/C%20%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">&#34;署名-非商用-相同方式共享 4.0&#34;</a> 转载请保留原文链接及作者。
     </p>
