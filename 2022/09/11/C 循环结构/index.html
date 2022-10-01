@@ -6,15 +6,15 @@
   <meta name="keywords" content="">
   <meta name="description" content="C 循环结构 | 百xiao生">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="for 循环while 循环do…while 循环循环的嵌套break 和 continue">
+<meta name="description" content="for 循环(一) for (循环变量赋初值 ; 循环条件 ; 循环变量增值)   &#x2F;&#x2F;初值可以是多个，如：(i&#x3D;1,j&#x3D;2; i&lt;10&amp;&amp;j&lt;10 ; i++,j+&#x3D;3) {     循环体 }  例： int i; int sum &#x3D; 0; for (i&#x3D;1; i&lt;&#x3D;100 ; i++) {     sum +&#x3D; i;       &#x2F;&#x2F;1+2+3+……+100">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C 循环结构">
 <meta property="og:url" content="https://baixiaoshengzjj.top/2022/09/11/C%20%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84/index.html">
 <meta property="og:site_name" content="百xiao生">
-<meta property="og:description" content="for 循环while 循环do…while 循环循环的嵌套break 和 continue">
+<meta property="og:description" content="for 循环(一) for (循环变量赋初值 ; 循环条件 ; 循环变量增值)   &#x2F;&#x2F;初值可以是多个，如：(i&#x3D;1,j&#x3D;2; i&lt;10&amp;&amp;j&lt;10 ; i++,j+&#x3D;3) {     循环体 }  例： int i; int sum &#x3D; 0; for (i&#x3D;1; i&lt;&#x3D;100 ; i++) {     sum +&#x3D; i;       &#x2F;&#x2F;1+2+3+……+100">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-09-11T11:01:37.000Z">
-<meta property="article:modified_time" content="2022-09-18T15:27:03.849Z">
+<meta property="article:modified_time" content="2022-10-01T14:30:38.706Z">
 <meta property="article:author" content="百xiao生">
 <meta name="twitter:card" content="summary">
 
@@ -267,7 +267,7 @@
     </div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="31">
-<input type="hidden" id="yelog_site_word_count" value="13.6k">
+<input type="hidden" id="yelog_site_word_count" value="14k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -621,12 +621,12 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2022-09-18 23:27:03'>2022-09-11 19:01</time>
+            发布时间 : <time class="date" title='最后更新: 2022-10-01 22:30:38'>2022-09-11 19:01</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:18</span>
+        <span>字数:398</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -672,7 +672,93 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="for-循环"><a href="#for-循环" class="headerlink" title="for 循环"></a>for 循环</h3><h3 id="while-循环"><a href="#while-循环" class="headerlink" title="while 循环"></a>while 循环</h3><h3 id="do…while-循环"><a href="#do…while-循环" class="headerlink" title="do…while 循环"></a>do…while 循环</h3><h3 id="循环的嵌套"><a href="#循环的嵌套" class="headerlink" title="循环的嵌套"></a>循环的嵌套</h3><h3 id="break-和-continue"><a href="#break-和-continue" class="headerlink" title="break 和 continue"></a>break 和 continue</h3>
+        <h3 id="for-循环"><a href="#for-循环" class="headerlink" title="for 循环"></a>for 循环</h3><pre><code>(一)
+for (循环变量赋初值 ; 循环条件 ; 循环变量增值)   //初值可以是多个，如：(i=1,j=2; i&lt;10&amp;&amp;j&lt;10 ; i++,j+=3)
+{
+    循环体
+}
+
+例：
+int i;
+int sum = 0;
+for (i=1; i&lt;=100 ; i++)
+{
+    sum += i;       //1+2+3+……+100
+}
+
+
+(二)
+循环变量赋初值;
+for ( ; 循环条件 ; 循环变量增值)
+{
+    循环体
+}
+
+
+(三)
+for (循环变量赋初值 ; 循环条件 ; )
+{
+    循环体;
+
+    循环变量增值;
+}
+
+
+(四)
+for (循环变量赋初值 ; ; 循环变量增值)    //省略了循环条件，无条件循环，永真循环
+{
+    循环体
+}
+
+
+(五)
+for ( ; ; )     //永真循环，与 while (1) 等价
+                //for后面的三个语句可省，但中间的两个 &quot; ; &quot; 不可省</code></pre><h3 id="while-循环"><a href="#while-循环" class="headerlink" title="while 循环"></a>while 循环</h3><pre><code>while (循环条件)
+{
+    循环体
+}
+
+例：
+int i;
+int sum = 0;
+while(i &lt;= 100)
+{
+    sum += i;
+    i++;
+}</code></pre><h3 id="do…while-循环"><a href="#do…while-循环" class="headerlink" title="do…while 循环"></a>do…while 循环</h3><p>  do…while先执行循环体再判断循环条件，因此至少执行一次循环。</p>
+<pre><code>do
+    循环体
+while (循环条件);   //末尾有 “;”
+
+int i;
+int sum = 0;
+do
+{
+    sum += i;
+    i++;  
+}while(i &lt;= 100);</code></pre><h3 id="循环的嵌套"><a href="#循环的嵌套" class="headerlink" title="循环的嵌套"></a>循环的嵌套</h3><p>三种循环可以相互嵌套</p>
+<h3 id="break-和-continue"><a href="#break-和-continue" class="headerlink" title="break 和 continue"></a>break 和 continue</h3><p>break ：终止循环；多层循环中只终止本层循环，不能终止外层循环。<br>go to语句能直接跳出多层循环。</p>
+<p>continue：结束本次循环迭代，进入下一次循环迭代。</p>
+<pre><code>int i = 1;
+int sum = 0; 
+while (1)
+{
+    if(i &gt; 100)
+        break;  //i&gt;100，终止循环，即从 1 只加到 100。
+    sum += i;
+    i++;
+}
+
+------
+
+int i;
+for (i=1; i&lt;=100 ; i++)
+{
+    if(i%3 == 0)
+        continue;   //能被3整除,则跳到下一次循环，
+
+    printf(&quot;%d &quot;,i); //1 2 4 5 7 8 ... 98 100
+}</code></pre>
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 1401362462@qq.com </span>
     </div>
@@ -682,10 +768,10 @@
 
 <div class="article_copyright">
     <p><span class="copy-title">文章标题:</span>C 循环结构</p>
-    <p><span class="copy-title">字数:</span><span class="post-count">18</span></p>
+    <p><span class="copy-title">字数:</span><span class="post-count">398</span></p>
     <p><span class="copy-title">本文作者:</span><a  title="百xiao生">百xiao生</a></p>
     <p><span class="copy-title">发布时间:</span>2022-09-11, 19:01:37</p>
-    <p><span class="copy-title">最后更新:</span>2022-09-18, 23:27:03</p>
+    <p><span class="copy-title">最后更新:</span>2022-10-01, 22:30:38</p>
     <span class="copy-title">原始链接:</span><a class="post-url" href="/2022/09/11/C%20%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84/" title="C 循环结构">https://baixiaoshengzjj.top/2022/09/11/C%20%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">&#34;署名-非商用-相同方式共享 4.0&#34;</a> 转载请保留原文链接及作者。
