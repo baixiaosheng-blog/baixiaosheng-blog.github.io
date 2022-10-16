@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Android studio导入项目 | 百xiao生</title>
-  <meta name="keywords" content=" Android studio ">
-  <meta name="description" content="Android studio导入项目 | 百xiao生">
+  <title>C 数组 | 百xiao生</title>
+  <meta name="keywords" content=" C学习笔记 ">
+  <meta name="description" content="C 数组 | 百xiao生">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="for 循环(一) for (循环变量赋初值 ; 循环条件 ; 循环变量增值)   &#x2F;&#x2F;初值可以是多个，如：(i&#x3D;1,j&#x3D;2; i&lt;10&amp;&amp;j&lt;10 ; i++,j+&#x3D;3) {     循环体 }  例： int i; int sum &#x3D; 0; for (i&#x3D;1; i&lt;&#x3D;100 ; i++) {     sum +&#x3D; i;       &#x2F;&#x2F;1+2+3+……+100">
 <meta property="og:type" content="article">
@@ -631,9 +631,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-Androidstudio导入项目" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-C 数组" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">Android studio导入项目</h1>
+        <h1 class="article-title">C 数组</h1>
     
     <div class="article-meta">
         
@@ -643,7 +643,7 @@
             <i class="iconfont icon-category"></i>
             
             
-            <a  data-rel="Android">Android</a>
+            <a  data-rel="C语音">C语音</a>
             
         </span>
         
@@ -651,19 +651,19 @@
         <span class="tag">
             <i class="iconfont icon-tag"></i>
             
-            <a class="color5">Android studio</a>
+            <a class="color1">C学习笔记</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2020-12-07 15:11:51'>2020-03-31 22:59</time>
+            发布时间 : <time class="date" title='最后更新: 2022-10-16 23:26:57'>2022-10-16 20:44</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:252</span>
+        <span>字数:916</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -693,7 +693,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Android-studio导入工程项目"><span class="toc-text">Android studio导入工程项目</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Android-studio导入工程项目需要修改三处信息，以便软件能正常打开、编辑工程"><span class="toc-text">Android studio导入工程项目需要修改三处信息，以便软件能正常打开、编辑工程</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#第一处要修改的是Android-studio版本信息"><span class="toc-text">第一处要修改的是Android studio版本信息</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第二处要修改的是gradle-wrapper-properties文件"><span class="toc-text">第二处要修改的是gradle-wrapper.properties文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第三处要修改的是build-gradle文件"><span class="toc-text">第三处要修改的是build.gradle文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#修改完成后就可以用软件重新打开工程了！"><span class="toc-text">修改完成后就可以用软件重新打开工程了！</span></a></li></ol></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#C-数组"><span class="toc-text">C 数组</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#一维数组的声明"><span class="toc-text">一维数组的声明</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#类型-数组名-常量表达式"><span class="toc-text">类型    数组名 [常量表达式]</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#一维数组的初始化"><span class="toc-text">一维数组的初始化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#一维数组元素的引用"><span class="toc-text">一维数组元素的引用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#注：数组存储字符串时，要特别关注一下问题"><span class="toc-text">注：数组存储字符串时，要特别关注一下问题</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二维数组"><span class="toc-text">二维数组</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -709,23 +709,90 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Android-studio导入工程项目"><a href="#Android-studio导入工程项目" class="headerlink" title="Android studio导入工程项目"></a>Android studio导入工程项目</h1><h2 id="Android-studio导入工程项目需要修改三处信息，以便软件能正常打开、编辑工程"><a href="#Android-studio导入工程项目需要修改三处信息，以便软件能正常打开、编辑工程" class="headerlink" title="Android studio导入工程项目需要修改三处信息，以便软件能正常打开、编辑工程"></a>Android studio导入工程项目需要修改三处信息，以便软件能正常打开、编辑工程</h2><p>####首先，下载工程项目（如果是压缩包，请先解压）</p>
+        <h2 id="C-数组"><a href="#C-数组" class="headerlink" title="C 数组"></a>C 数组</h2><p>数组是一组相同类型元素的顺序集合。数组中的每个元素的类型相同。<br>数组元素可以通过索引访问，第一个索引值为0。</p>
+<table>
+<thead>
+<tr>
+<th align="center">索引</th>
+<th align="center">数组的第n个元素</th>
+<th align="center">访问</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">a[0] （或 a）</td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="center">2</td>
+<td align="center">a[1]</td>
+</tr>
+<tr>
+<td align="center">n</td>
+<td align="center">n+1</td>
+<td align="center">a[n]</td>
+</tr>
+</tbody></table>
 <hr>
-<h4 id="第一处要修改的是Android-studio版本信息"><a href="#第一处要修改的是Android-studio版本信息" class="headerlink" title="第一处要修改的是Android studio版本信息"></a>第一处要修改的是Android studio版本信息</h4><pre><code>打开刚得到的工程文件夹，修改build.gradle文件（用记事本之类的文本编辑工具打开）</code></pre><p><img src="/2020/03/31/Androidstudio%E5%AF%BC%E5%85%A5%E9%A1%B9%E7%9B%AE/1.jpg" alt></p>
-<pre><code>当前使用的Android studio版本，可以打开软件查看</code></pre><p><img src="/2020/03/31/Androidstudio%E5%AF%BC%E5%85%A5%E9%A1%B9%E7%9B%AE/close.jpg" alt>   </p>
-<p><img src="/2020/03/31/Androidstudio%E5%AF%BC%E5%85%A5%E9%A1%B9%E7%9B%AE/version.jpg" alt> </p>
-<hr>
-<h4 id="第二处要修改的是gradle-wrapper-properties文件"><a href="#第二处要修改的是gradle-wrapper-properties文件" class="headerlink" title="第二处要修改的是gradle-wrapper.properties文件"></a>第二处要修改的是gradle-wrapper.properties文件</h4><pre><code>gradle-wrapper.properties文件路径：.../工程文件夹/gradle/wrapper/gradle-wrapper.properties</code></pre><p><img src="/2020/03/31/Androidstudio%E5%AF%BC%E5%85%A5%E9%A1%B9%E7%9B%AE/2-1.jpg" alt> </p>
-<pre><code>此处版本信息可以在路径：C:/用户/用户名/.gradle/wrapper/dists下查看</code></pre><p><img src="/2020/03/31/Androidstudio%E5%AF%BC%E5%85%A5%E9%A1%B9%E7%9B%AE/2-2.jpg" alt></p>
-<hr>
-<h4 id="第三处要修改的是build-gradle文件"><a href="#第三处要修改的是build-gradle文件" class="headerlink" title="第三处要修改的是build.gradle文件"></a>第三处要修改的是build.gradle文件</h4><pre><code>build.gradle文件路径：.../工程文件夹/app
-compileSdkVersion信息路径：.../SDK安装目录/platforms
-buildToolsVersion信息路径：.../SDK安装目录/build-tools</code></pre><p><img src="/2020/03/31/Androidstudio%E5%AF%BC%E5%85%A5%E9%A1%B9%E7%9B%AE/3-1.jpg" alt></p>
-<p><img src="/2020/03/31/Androidstudio%E5%AF%BC%E5%85%A5%E9%A1%B9%E7%9B%AE/3-2.jpg" alt></p>
-<p><img src="/2020/03/31/Androidstudio%E5%AF%BC%E5%85%A5%E9%A1%B9%E7%9B%AE/3-3.jpg" alt></p>
-<hr>
-<h4 id="修改完成后就可以用软件重新打开工程了！"><a href="#修改完成后就可以用软件重新打开工程了！" class="headerlink" title="修改完成后就可以用软件重新打开工程了！"></a>修改完成后就可以用软件重新打开工程了！</h4><hr>
-<pre><code>还有哦，工程所在路径含中文名可能会报错哦~</code></pre>
+<h2 id="一维数组的声明"><a href="#一维数组的声明" class="headerlink" title="一维数组的声明"></a>一维数组的声明</h2><h5 id="类型-数组名-常量表达式"><a href="#类型-数组名-常量表达式" class="headerlink" title="类型    数组名 [常量表达式]"></a>类型    数组名 [常量表达式]</h5><pre><code>例: int a[10];    //定义数组名为a，长度为10的int型数组
+
+    #define A 5  //宏定义 符号常量
+    int b[A];
+
+    int n = 10;
+    int c[n]     //报错！要填入 常量表达式。C99才支持这样写，称为变长数组</code></pre><hr>
+<h2 id="一维数组的初始化"><a href="#一维数组的初始化" class="headerlink" title="一维数组的初始化"></a>一维数组的初始化</h2><pre><code>例：
+    int a[5] = {1, 2, 3, 4, 5}  //大括号{}括住数组元素，元素之间逗号 , 隔开
+    int b[5] = {1, 2, 3}        //填入元素个数小于数组长度，后面自动补0
+
+    int c[] = {1, 2, 3, 4}      //不填数组长度，以填入的元素个数为数组长度
+    int d[4] ={1, 2, 3, 4}      //与数组c等价
+
+    //有规律的数组元素也可以用 循环 进行赋值
+    int e[5];
+    int i = 0;
+    for (i = 0;i &lt; 5;i++)
+    {
+        e[i] = i * 2;                //e[5] = {0, 2, 4, 6, 8}
+    }</code></pre><hr>
+<h2 id="一维数组元素的引用"><a href="#一维数组元素的引用" class="headerlink" title="一维数组元素的引用"></a>一维数组元素的引用</h2><p>引用形式为：<strong>数组名[索引]</strong>  </p>
+<pre><code>例：
+    a[3]    //数组 a 的第 4 个元素（索引从 0 开始）</code></pre><h4 id="注：数组存储字符串时，要特别关注一下问题"><a href="#注：数组存储字符串时，要特别关注一下问题" class="headerlink" title="注：数组存储字符串时，要特别关注一下问题"></a>注：数组存储字符串时，要特别关注一下问题</h4><ol>
+<li>printf()函数以字符串形式 %s 打印字符数组中的字符，要确保数组末尾以 ‘\0’ 结束。</li>
+<li>strlen()函数计算字符数组中元素个数时，要确保数组末尾以 ‘\0’ 结束，计算元素不包含数组末尾的 ‘\0’。</li>
+<li>sizeof() 运算符计算数组的整体大小，包含末尾的 ‘\0’。  </li>
+</ol>
+<pre><code>例：
+     char arr1[] = &quot;abc&quot;;                //[&apos;a&apos;]、[&apos;b&apos;]、[&apos;c&apos;]、[&apos;\0&apos;]
+             char arr2[3] = &quot;abc&quot;;            //[&apos;a&apos;]、[&apos;b&apos;]、[&apos;c&apos;]  指定数组大小刚好为元素个数，末尾没存&apos;\0&apos;
+     char arr3[] = { &apos;a&apos;, &apos;b&apos;, &apos;c&apos; };    //[&apos;a&apos;]、[&apos;b&apos;]、[&apos;c&apos;]
+     char arr4[] = { &apos;a&apos;, &apos;b&apos;, &apos;c&apos;, &apos;\0&apos;};    //[&apos;a&apos;]、[&apos;b&apos;]、[&apos;c&apos;]、[&apos;\0&apos;] 初始化手动加入 &apos;\0&apos;
+     char arr5[5];                            //未初始化
+
+     printf(&quot;arr1:  %s\n&quot;, arr1);                //abc 
+     printf(&quot;arr2:  %s\n&quot;, arr2);                //abc烫烫烫烫烫烫烫烫烫烫烫烫烫烫烫烫虜怰ｘ
+     printf(&quot;arr3:  %s\n&quot;, arr3);                //abc烫烫蘟bc烫烫烫烫烫烫烫烫烫烫烫烫滔鵜Y蠐
+     printf(&quot;arr4:  %s\n&quot;, arr4);                //abc
+     printf(&quot;arr5:  %s\n&quot;, arr5);                //烫烫烫烫烫烫烫烫烫烫烫烫烫烫奆??
+     //乱码，printf以 &apos;\0&apos;为结束，arr2、arr3结尾是 &apos;c&apos; ，会继续打印往后内存单元中的内容，到 &apos;\0&apos;才结束
+     //printf()函数以字符串形式 %s 打印字符数组中的字符，要确保数组末尾以 &apos;\0&apos; 结束。
+
+     printf(&quot;arr1: %d\n&quot;, strlen(arr1));    // 3
+     printf(&quot;arr2: %d\n&quot;, strlen(arr2));    // 67（大于3的随机值）strlen以 &apos;\0&apos;为结束
+     printf(&quot;arr3: %d\n&quot;, strlen(arr3));    // 35（大于3的随机值）
+     printf(&quot;arr4: %d\n&quot;, strlen(arr4));    // 3
+     printf(&quot;arr5: %d\n&quot;, strlen(arr5));    // 34（随机值）
+     //strlen()函数计算字符数组中元素个数时，要确保数组末尾以 &apos;\0&apos; 结束，计算元素不包含数组末尾的 &apos;\0&apos;。
+
+
+     printf(&quot;arr1: %d\n&quot;, sizeof(arr1) / sizeof(arr1[0]));    // 4
+     printf(&quot;arr2: %d\n&quot;, sizeof(arr2) / sizeof(arr2[0]));    // 3
+     printf(&quot;arr3: %d\n&quot;, sizeof(arr3) / sizeof(arr3[0]));    // 3
+     printf(&quot;arr4: %d\n&quot;, sizeof(arr4) / sizeof(arr4[0]));    // 4
+     printf(&quot;arr5: %d\n&quot;, sizeof(arr5) / sizeof(arr5[0]));    // 5
+     //sizeof() 运算符计算数组的整体大小，包含末尾的 &apos;\0&apos;。</code></pre><hr>
+<h2 id="二维数组"><a href="#二维数组" class="headerlink" title="二维数组"></a>二维数组</h2>
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 1401362462@qq.com </span>
     </div>
@@ -734,12 +801,12 @@ buildToolsVersion信息路径：.../SDK安装目录/build-tools</code></pre><p><
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>Android studio导入项目</p>
-    <p><span class="copy-title">字数:</span><span class="post-count">252</span></p>
+    <p><span class="copy-title">文章标题:</span>C 数组</p>
+    <p><span class="copy-title">字数:</span><span class="post-count">916</span></p>
     <p><span class="copy-title">本文作者:</span><a  title="百xiao生">百xiao生</a></p>
-    <p><span class="copy-title">发布时间:</span>2020-03-31, 22:59:53</p>
-    <p><span class="copy-title">最后更新:</span>2020-12-07, 15:11:51</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2020/03/31/Androidstudio%E5%AF%BC%E5%85%A5%E9%A1%B9%E7%9B%AE/" title="Android studio导入项目">https://baixiaoshengzjj.top/2020/03/31/Androidstudio%E5%AF%BC%E5%85%A5%E9%A1%B9%E7%9B%AE/</a>
+    <p><span class="copy-title">发布时间:</span>2022-10-16, 20:44:54</p>
+    <p><span class="copy-title">最后更新:</span>2022-10-16, 23:26:57</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2022/10/16/C%20%E6%95%B0%E7%BB%84/" title="C 数组">https://baixiaoshengzjj.top/2022/10/16/C%20%E6%95%B0%E7%BB%84/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">&#34;署名-非商用-相同方式共享 4.0&#34;</a> 转载请保留原文链接及作者。
     </p>
